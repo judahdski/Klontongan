@@ -21,45 +21,61 @@
             grid-template-columns: 1fr 2fr 1fr;
             grid-template-rows: 1fr 2fr 1fr;
             grid-template-areas:
-                'header''header''header'
-                'navbar''main''iframe'
-                'footer''footer''footer';
+                'header header header'
+                'navbar main iframe'
+                'footer footer footer';
         }
+
+        .container div {
+            text-align: center;
+            color: white;
+        }
+
 
         .satu {
             background-color: aquamarine;
-            grid-area: 'header';
+            grid-area: header;
         }
 
         .dua {
             background-color: lightsalmon;
-            grid-area: 'navbar';
+            grid-area: navbar;
         }
 
         .tiga {
             background-color: lightgreen;
-            grid-area: 'main';
+            grid-area: main;
         }
 
         .empat {
             background-color: brown;
-            grid-area: 'iframe';
+            grid-area: iframe;
         }
 
         .lima {
             background-color: black;
-            grid-area: 'footer';
+            grid-area: footer;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="satu"></div>
-        <div class="dua"></div>
-        <div class="tiga"></div>
-        <div class="empat"></div>
-        <div class="lima"></div>
+        <div class="satu">
+            <p>Header</p>
+        </div>
+        <div class="dua">
+            <p>Navbar</p>
+        </div>
+        <div class="tiga">
+            <p>Main</p>
+        </div>
+        <div class="empat">
+            <p>Iframe</p>
+        </div>
+        <div class="lima">
+            <p>Footer</p>
+        </div>
     </div>
 </body>
 
