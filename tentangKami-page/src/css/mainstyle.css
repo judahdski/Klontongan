@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vmax;
+    background-color: #fdf0e6;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px auto 200px;
+}
+
+header {
+    background-color: lightskyblue;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+main {
+    background-color: lightgreen;
+}
+
+footer {
+    background-color: lightcoral;
+}
+
+@media screen and (min-width: 991px) {
+    /* Header */
+    .header-logo {
+        justify-self: center;
+        align-self: end;
+    }
+    /* akhir dari header */
+}
