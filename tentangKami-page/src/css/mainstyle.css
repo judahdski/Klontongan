@@ -19,7 +19,7 @@ header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-
+/* header pake flex aja */
 main {
     background-color: lightgreen;
 }
