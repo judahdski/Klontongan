@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.row {
+    width: 100%;
+}
+/* Column responsive */
+/* for desktop */
+@media screen and (min-width: 991px) {
+    .col-d-1 {
+        width: 8.33%;
+    }
+    .col-d-2 {
+        width: 16.66%;
+    }
+    .col-d-3 {
+        width: 25%;
+    }
+    .col-d-4 {
+        width: 33.33%;
+    }
+    .col-d-5 {
+        width: 41.66%;
+    }
+    .col-d-6 {
+        width: 50%;
+    }
+    .col-d-7 {
+        width: 58.33%;
+    }
+    .col-d-8 {
+        width: 66.66%;
+    }
+    .col-d-9 {
+        width: 75%;
+    }
+    .col-d-10 {
+        width: 83.33%;
+    }
+    .col-d-11 {
+        width: 91.66%;
+    }
+    .col-d-12 {
+        width: 100%;
+    }
+}
+/* for tablet */
+@media screen and (min-width: 661px) and (max-width: 990px) {
+    .col-t-1 {
+        width: 8.33%;
+    }
+    .col-t-2 {
+        width: 16.66%;
+    }
+    .col-t-3 {
+        width: 25%;
+    }
+    .col-t-4 {
+        width: 33.33%;
+    }
+    .col-t-5 {
+        width: 41.66%;
+    }
+    .col-t-6 {
+        width: 50%;
+    }
+    .col-t-7 {
+        width: 58.33%;
+    }
+    .col-t-8 {
+        width: 66.66%;
+    }
+    .col-t-9 {
+        width: 75%;
+    }
+    .col-t-10 {
+        width: 83.33%;
+    }
+    .col-t-11 {
+        width: 91.66%;
+    }
+    .col-t-12 {
+        width: 100%;
+    }
+}
+
+/* for mobile */
+@media screen and (min-width: 450px) and (max-width: 990px) {
+    .col-m-1 {
+        width: 8.33%;
+    }
+    .col-m-2 {
+        width: 16.66%;
+    }
+    .col-m-3 {
+        width: 25%;
+    }
+    .col-m-4 {
+        width: 33.33%;
+    }
+    .col-m-5 {
+        width: 41.66%;
+    }
+    .col-m-6 {
+        width: 50%;
+    }
+    .col-m-7 {
+        width: 58.33%;
+    }
+    .col-m-8 {
+        width: 66.66%;
+    }
+    .col-m-9 {
+        width: 75%;
+    }
+    .col-m-10 {
+        width: 83.33%;
+    }
+    .col-m-11 {
+        width: 91.66%;
+    }
+    .col-m-12 {
+        width: 100%;
+    }
+}
+
+/* Style */
+.container {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* header */
+header {
+    width: 100vmax;
+    background-color: lightblue;
+}
+
+.header-page {
+    max-width: 1600px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Logo Header */
+.logo-header {
+    background-color: lightcoral;
+}
+/* Nav-link */
+nav {
+    background-color: lightseagreen;
+}
+
+nav .navlink {
+    background-color: aquamarine;
+}
+
+.navlink {
+    display: flex;
+    justify-content: space-around;
+}
+/* akhir dari header */
+
+/* Responsive design */
+/* for desktop */
+@media screen and (min-width: 991px) {
+    .container {
+        grid-template-rows: 100px auto 200px;
+    }
+
+    /* header */
+    .header-page {
+        height: 100px;
+        justify-content: space-around;
+    }
+
+    /* Logo Header */
+    .logo-header {
+        padding: 19.7px 0 0 20px;
+    }
+
+    /* Nav-link */
+    nav {
+        width: 35%;
+        padding: 38px 0;
+    }
+
+    nav .navlink {
+        width: 75%;
+        background-color: aquamarine;
+    }
+
+    .navlink {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    /* Login-header */
+    .login-header {
+        background-color: lightpink;
+        width: 15%;
+
+        display: flex;
+    }
+
+    .login-header .login-btn-header {
+        padding: 40px 35px 0 0;
+    }
+
+    .login-header .signup-btn-header {
+        padding: 25px 0;
+    }
+
+    .login-header .signup-btn-header a {
+        display: inline-block;
+        background-color: white;
+        padding: 15px 23px;
+    }
+    /* akhir dari header */
+}
+
+/* for tablet */
+@media screen and (min-width: 661px) and (max-width: 990px) {
+    .container {
+        grid-template-rows: 80px auto 200px;
+    }
+
+    /* header */
+    .header-page {
+        height: 80px;
+        justify-content: space-between;
+    }
+
+    /* Logo Header */
+    .logo-header {
+        padding: 13.7px 0 0 100px;
+    }
+
+    /* Nav-link */
+    nav {
+        width: 50%;
+        padding: 30px 0;
+    }
+
+    nav .navlink {
+        width: 100%;
+        background-color: aquamarine;
+    }
+
+    .navlink {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    /* Login-header */
+    .login-header {
+        display: none;
+    }
+    /* akhir dari header */
+}
+/* for mobile */
+@media screen and (min-width: 450px) and (max-width: 660px) {
+}
