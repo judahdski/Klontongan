@@ -3,9 +3,9 @@ var jumlahAngkot = 10;
 
 for (var noAngkot = 1; noAngkot <= jumlahAngkot; noAngkot++) {
     var pernyataan = 'Angkot No. ' + noAngkot;
-    if (noAngkot <= 6) {
+    if (noAngkot <= 6 && noAngkot !== 5) {
         console.log(pernyataan + ' beroperasi dengan baik');
-    } else if (noAngkot === 8) {
+    } else if (noAngkot === 8 || noAngkot === 10 || noAngkot === 5) {
         console.log(pernyataan + ' sedang lembur.');
     } else {
         console.log(pernyataan + ' tidak beroperasi dengan baik.');

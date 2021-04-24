@@ -136,7 +136,6 @@
 
 /* header */
 header {
-    width: 100vmax;
     background-color: lightblue;
 }
 
@@ -164,6 +163,38 @@ nav .navlink {
     justify-content: space-around;
 }
 /* akhir dari header */
+
+/* Main */
+main {
+    width: 100%;
+}
+/* akhir dari main */
+
+/* Footer */
+footer {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-page {
+    width: 238px;
+    padding-top: 42.8px;
+}
+
+.group-of-logo {
+    padding-left: 31px;
+    width: 176.51px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.group-copyright {
+    margin-top: 16.4px;
+    display: flex;
+    align-items: center;
+}
+/* akhir dari footer */
 
 /* Responsive design */
 /* for desktop */
@@ -221,6 +252,19 @@ nav .navlink {
         padding: 15px 23px;
     }
     /* akhir dari header */
+
+    /* Main */
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: satu 868px dua 768px tiga 768px empat 768px lima 768px enam 768px tujuh;
+    }
+
+    .main-page {
+        grid-row-start: 'satu';
+        grid-row-end: 'dua';
+    }
+    /* akhir dari main */
 }
 
 /* for tablet */
