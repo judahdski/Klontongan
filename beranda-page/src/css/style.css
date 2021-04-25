@@ -311,6 +311,17 @@ footer {
         grid-area: advantages;
         background-color: #fec429;
     }
+
+    .advantages .row:last-child {
+        display: flex;
+        width: 809.9px;
+    }
+    .box {
+        width: 219.97px;
+        height: 261.09px;
+        background-color: #ffd04f;
+        box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.3);
+    }
     /* akhir dari main */
 }
 
