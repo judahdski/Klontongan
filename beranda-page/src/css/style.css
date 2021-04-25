@@ -204,6 +204,10 @@ footer {
     }
 
     /* header */
+    header {
+        z-index: 1;
+    }
+
     .header-page {
         height: 100px;
         justify-content: space-around;
@@ -255,14 +259,57 @@ footer {
 
     /* Main */
     main {
+        margin-top: -100px;
+    }
+    .main-page {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: satu 868px dua 768px tiga 768px empat 768px lima 768px enam 768px tujuh;
+        grid-template-rows: 868px 768px 768px 768px 768px 768px;
+        grid-template-areas:
+            'hero-content'
+            'about-us'
+            'advantages'
+            'toko'
+            'comments'
+            'login-main';
     }
 
-    .main-page {
-        grid-row-start: 'satu';
-        grid-row-end: 'dua';
+    .hero-content {
+        grid-area: hero-content;
+        background-image: url(../../img/main/hero-content/background-image.jpg);
+        background-size: cover;
+
+        position: relative;
+        padding-top: 245px;
+        padding-left: 45%;
+    }
+
+    .filter-hitam {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+
+    .aboutus {
+        grid-area: about-us;
+        padding-top: 171px;
+    }
+
+    .aboutus .row {
+        text-align: center;
+    }
+
+    .aboutus .row:last-child {
+        display: flex;
+    }
+
+    .advantages {
+        grid-area: advantages;
+        background-color: #fec429;
     }
     /* akhir dari main */
 }
