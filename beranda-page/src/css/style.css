@@ -126,6 +126,11 @@
     }
 }
 
+.row {
+    width: 100%;
+    text-align: center;
+}
+
 /* Style */
 .container {
     width: 100%;
@@ -274,6 +279,7 @@ footer {
             'login-main';
     }
 
+    /*          hero-content */
     .hero-content {
         grid-area: hero-content;
         background-image: url(../../img/main/hero-content/background-image.jpg);
@@ -284,7 +290,7 @@ footer {
         padding-left: 45%;
     }
 
-    .filter-hitam {
+    .hero-content .filter-hitam {
         position: absolute;
         top: 0;
         right: 0;
@@ -293,35 +299,142 @@ footer {
 
         background-color: rgba(0, 0, 0, 0.25);
     }
+    /*          akhir dari hero-content */
 
+    /*          about-us */
     .aboutus {
         grid-area: about-us;
-        padding-top: 171px;
+        display: grid;
     }
 
-    .aboutus .row {
-        text-align: center;
+    .inside-aboutus {
+        margin: auto;
+        max-width: 1200px;
+        background-color: lightslategray;
+    }
+
+    .inside-aboutus .row:first-child {
+        margin-bottom: 55px;
     }
 
     .aboutus .row:last-child {
         display: flex;
     }
 
+    .aboutus .row:last-child .col-d-5:last-child {
+        margin-left: 105px;
+    }
+    /*          akhir dari about-us */
+
+    /*          #pakeKlontonganAja  */
     .advantages {
         grid-area: advantages;
         background-color: #fec429;
+        display: grid;
     }
 
-    .advantages .row:last-child {
-        display: flex;
+    .inside-advantages {
+        margin: auto;
         width: 809.9px;
     }
+
+    .inside-advantages .content-advantages {
+        margin-top: 67px;
+        display: flex;
+        width: 809.9px;
+        justify-content: space-between;
+    }
+
     .box {
         width: 219.97px;
         height: 261.09px;
         background-color: #ffd04f;
         box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.3);
     }
+    /*          akhir dari advantages */
+
+    /*          toko */
+    .toko {
+        grid-area: toko;
+        display: grid;
+    }
+
+    .inside-toko {
+        margin: auto;
+        width: 850px;
+    }
+
+    .row:first-child {
+        margin-bottom: 10px;
+    }
+
+    .row:nth-child(2) {
+        margin-bottom: 101.8px;
+    }
+
+    .row:nth-child(3) {
+        margin-bottom: 102.6px;
+    }
+    /*          akhir dari toko */
+
+    /*          comments */
+
+    .comments {
+        grid-area: comments;
+        display: grid;
+        background-color: #fbe6c2;
+    }
+
+    .inside-comments {
+        margin: auto;
+    }
+
+    .comments .row:first-child {
+        margin-bottom: 100px;
+    }
+
+    .comments .row:nth-child(2) {
+        width: 850px;
+        display: flex;
+        justify-content: space-between;
+    }
+    /*          akhir dari comments */
+
+    /*          login-main */
+    .login-main {
+        grid-area: login-main;
+        display: grid;
+    }
+
+    .inside-login-main {
+        margin: auto;
+        padding-top: 158px;
+        width: 1088px;
+        height: 600px;
+        background-image: url(../../img/main/login-main/background.jpg);
+        background-size: cover;
+        background-position: center;
+
+        position: relative;
+    }
+
+    .inside-login-main .filter-hitam {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+
+    .inside-login-main .row:first-child {
+        margin-bottom: 13px;
+    }
+
+    .inside-login-main .row:nth-child(2) {
+        margin-bottom: 106px;
+    }
+    /*          akhir dari login-main */
     /* akhir dari main */
 }
 
