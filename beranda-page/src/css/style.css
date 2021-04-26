@@ -362,8 +362,14 @@ footer {
         width: 809.9px;
     }
 
+    .inside-advantages .title-section-advantages h3 {
+        font-weight: 500;
+        font-size: 2em;
+        color: white;
+    }
+
     .inside-advantages .content-advantages {
-        margin-top: 67px;
+        margin-top: 65px;
         display: flex;
         width: 809.9px;
         justify-content: space-between;
