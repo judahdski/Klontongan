@@ -1,14 +1,14 @@
-var shoppingList = [
-    ['Chocolate Bar', 16],
-    ['Silver Quinn', 15],
-    ['Citato', 17],
-];
+var baris, kolom;
+var s = '';
 
-var storeData = shoppingList.unshift('Judah');
-console.log(shoppingList);
+var num = prompt('angka :');
 
-shoppingList.shift();
-shoppingList.unshift(['Judah', 18]);
+for (baris = 1; baris <= num; baris++) {
+    for (kolom = 1; kolom <= num; kolom++) {
+        s += '*';
+    }
+    s += '';
+}
 
-// shift / unshift for change first data of the array
-// push / pop for change last data of the array
+console.log(s);
+console.log(typeof num);
