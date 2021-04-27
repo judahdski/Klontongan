@@ -209,57 +209,27 @@ footer {
     }
 
     .header-page {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
         height: 100px;
-        justify-content: space-between;
     }
 
-    /* Logo Header */
-    .logo-header {
-        padding: 19.7px 0 0 120px;
-    }
+    .nav-link {
+        width: 30%;
 
-    /* Nav-link */
-    nav {
-        width: 35%;
-        padding: 38px 0;
-    }
-
-    nav .navlink {
-        width: 75%;
-    }
-
-    .navlink {
         display: flex;
         justify-content: space-around;
+        align-items: center;
     }
 
-    /* Login-header */
-    .login-header {
-        width: 15%;
-
-        display: flex;
-    }
-
-    .login-header .login-btn-header {
-        padding: 40px 35px 0 0;
-    }
-
-    .login-header .login-btn-header a {
+    .nav-link a {
         text-decoration: none;
+        font-weight: 300;
+        font-size: 1em;
         color: white;
-    }
-
-    .login-header .signup-btn-header {
-        padding: 25px 0;
-    }
-
-    .login-header .signup-btn-header a {
-        display: inline-block;
-        background-color: white;
-        padding: 15px 23px;
-
-        text-decoration: none;
-        color: black;
     }
     /* akhir dari header */
 
@@ -334,7 +304,6 @@ footer {
     .inside-aboutus {
         margin: auto;
         max-width: 1200px;
-        background-color: lightslategray;
     }
 
     .inside-aboutus .row:first-child {
@@ -343,6 +312,11 @@ footer {
 
     .aboutus .row:last-child {
         display: flex;
+        align-items: center;
+    }
+
+    .aboutus .row:last-child .col-d-5:first-child img {
+        border-radius: 10px;
     }
 
     .aboutus .row:last-child .col-d-5:last-child {
@@ -380,6 +354,24 @@ footer {
         height: 261.09px;
         background-color: #ffd04f;
         box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.3);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 15px;
+    }
+
+    .box p:nth-child(2) {
+        font-weight: bold;
+        font-size: 1.5em;
+        color: #484848;
+    }
+
+    .box p:last-child {
+        margin-top: 18px;
+        font-size: 1em;
+        text-align: center;
+        color: #787878;
     }
     /*          akhir dari advantages */
 
@@ -394,16 +386,38 @@ footer {
         width: 850px;
     }
 
-    .row:first-child {
+    .inside-toko .title-section-toko {
         margin-bottom: 10px;
     }
 
-    .row:nth-child(2) {
+    .inside-toko .title-section-toko h3 {
+        font-weight: 600;
+        font-size: 2em;
+    }
+
+    .inside-toko .row:nth-child(2) {
+        font-size: 1em;
+    }
+
+    .inside-toko .row:nth-child(2) {
         margin-bottom: 101.8px;
     }
 
-    .row:nth-child(3) {
+    .inside-toko .row:nth-child(3) {
         margin-bottom: 102.6px;
+        width: 913px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .inside-toko .row:last-child button {
+        padding: 15px 25px;
+        border: none;
+        background-color: #fec429;
+        border-radius: 5px;
+
+        color: white;
     }
     /*          akhir dari toko */
 
@@ -427,6 +441,19 @@ footer {
         width: 850px;
         display: flex;
         justify-content: space-between;
+    }
+
+    .comments .row:nth-child(2) .image-person {
+        display: block;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .comments .row:nth-child(2) .image-person img {
+        object-fit: cover;
+        object-position: -32px 0;
     }
     /*          akhir dari comments */
 
