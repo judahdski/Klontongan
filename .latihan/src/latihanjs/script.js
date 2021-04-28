@@ -1,14 +1,7 @@
-var baris, kolom;
-var s = '';
+var name = prompt('Siapa namamu?');
 
-var num = prompt('angka :');
-
-for (baris = 1; baris <= num; baris++) {
-    for (kolom = 1; kolom <= num; kolom++) {
-        s += '*';
-    }
-    s += '';
+function callName(name) {
+    alert('Hello ' + name + '!');
 }
 
-console.log(s);
-console.log(typeof num);
+callName(name);
