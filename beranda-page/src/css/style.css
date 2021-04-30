@@ -491,7 +491,6 @@ footer {
     /*          akhir dari toko */
 
     /*          comments */
-
     .comments {
         grid-area: comments;
         display: grid;
@@ -502,22 +501,22 @@ footer {
         margin: auto;
     }
 
-    .comments .title-section-comments {
+    .inside-comments .title-section-comments {
         margin-bottom: 100px;
     }
 
-    .comments .title-section-comments h4 {
+    .inside-comments .title-section-comments h4 {
         font-size: 1.5em;
         font-weight: 500;
     }
 
-    .comments .row:nth-child(2) {
+    .inside-comments .row:nth-child(2) {
         width: 850px;
         display: flex;
         justify-content: space-between;
     }
 
-    .comment .image-person {
+    .comment-content .image-person {
         margin: auto;
         display: block;
         width: 80px;
@@ -526,13 +525,16 @@ footer {
         overflow: hidden;
     }
 
-    .comment .image-person img {
+    .comment-content .image-person img {
         object-fit: cover;
         object-position: -32px 0;
     }
 
-    .comment p {
+    .comment-content p {
         margin-top: 30px;
+        letter-spacing: 0.5px;
+        word-spacing: 1.5px;
+        line-height: 1.25em;
     }
     /*          akhir dari comments */
 
