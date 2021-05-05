@@ -203,9 +203,15 @@ main {
     color: #0d0c22;
 }
 
+.pembatas-kategori {
+    margin: auto;
+    width: 80%;
+}
+
 /* menu-utama */
 .menu-utama {
-    width: 100%;
+    margin: auto;
+    width: 80%;
 }
 
 .inside-menu-utama {
