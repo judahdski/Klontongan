@@ -36,3 +36,12 @@ while (data[i] < data[anakKiri]) {
 
 console.log(data);
 console.log(i);
+
+function heapify(input) {
+    maxHeapify();
+}
+
+function maxHeapify(a, i) {
+    let left = 2 * i + 1;
+    let right = 2 * i + 2;
+}
