@@ -42,9 +42,8 @@ function heapify(input) {
     maxHeapify();
 }
 
-function maxHeapify(a, i) {
-    // let left = 2 * i + 1;
-    // let right = 2 * i + 2;
-    // if (left <= data.length && ) {
-    // }
+function hidup() {
+    doa();
+    jalanin();
+    whatNext();
 }

@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Style */
+.container {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* header */
+.header-page {
+    max-width: 1600px;
+    display: flex;
+    flex-direction: row;
+}
+/* Nav-link */
+nav ul {
+    list-style: none;
+}
+
+.navlink {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navlink li a {
+    text-decoration: none;
+    color: white;
+}
+/* akhir dari header */
+
+/* main */
+main {
+    width: 100%;
+    background-color: white;
+}
+
+.inside-main {
+    width: 80%;
+    margin: auto;
+}
+
+.btn-pesan a {
+    padding: 15px 25px;
+    font-weight: 500;
+    font-size: 1.15em;
+    text-decoration: none;
+    color: white;
+    background-color: #fec429;
+    border-radius: 5px;
+}
+/* akhir dari main */
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    background-color: #fec429;
+}
+
+.footer-page {
+    width: 238px;
+    padding-top: 66.9px;
+}
+
+.group-of-logo {
+    padding-left: 31px;
+    width: 176.51px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.group-copyright {
+    margin-top: 16.4px;
+    display: flex;
+    align-items: center;
+}
+/* akhir dari footer */
+
+/* Responsive design */
+/* for desktop */
+@media screen and (min-width: 1320px) and (max-width: 1700px) {
+    .container {
+        grid-template-rows: 100px auto 200px;
+    }
+
+    /* header */
+    header {
+        z-index: 3;
+    }
+
+    .header-page {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+        height: 100px;
+    }
+
+    .nav-link {
+        width: 30%;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .nav-link a {
+        text-decoration: none;
+        font-weight: 300;
+        font-size: 1em;
+        color: black;
+    }
+    /* akhir dari header */
+
+    /* main */
+    .inside-main {
+        padding-top: 45px;
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .picture-of-product {
+        width: 50%;
+    }
+
+    .description-of-product {
+        width: 50%;
+    }
+
+    .description-of-product .product-name {
+        font-weight: 400;
+        font-size: 2em;
+        padding-bottom: 30px;
+    }
+
+    .description-of-product .product-price {
+        font-size: 1.5em;
+        padding-bottom: 25px;
+    }
+
+    .description-of-product .product-desc {
+        font-size: 1.15em;
+        line-height: 25px;
+        padding-bottom: 60px;
+    }
+
+    /* akhir dari main */
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1319px) {
+}
+
+/* for tablet */
+@media screen and (min-width: 661px) and (max-width: 990px) {
+    .container {
+        grid-template-rows: 80px auto 200px;
+    }
+
+    /* header */
+    .header-page {
+        height: 80px;
+        justify-content: space-between;
+    }
+
+    /* Logo Header */
+    .logo-header {
+        padding: 13.7px 0 0 100px;
+    }
+
+    /* Nav-link */
+    nav {
+        width: 50%;
+        padding: 30px 0;
+    }
+
+    nav .navlink {
+        width: 100%;
+        background-color: aquamarine;
+    }
+
+    .navlink {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    /* Login-header */
+    .login-header {
+        display: none;
+    }
+    /* akhir dari header */
+}
+
+/* for mobile */
+@media screen and (min-width: 450px) and (max-width: 660px) {
+    /* header */
+    /* akhir dari header */
+}
