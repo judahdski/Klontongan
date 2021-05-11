@@ -5,77 +5,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid & Flex</title>
+    <title>Flex</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         .container {
-            margin: 50px auto;
-            width: 400px;
-            height: 600px;
-            display: grid;
-            grid-template-columns: 1fr 2fr 1fr;
-            grid-template-rows: 1fr 2fr 1fr;
-            grid-template-areas:
-                'header header header'
-                'navbar main iframe'
-                'footer footer footer';
+            width: 1200px;
+            height: 1200px;
+            border: 1px solid;
+            margin: 100px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-around;
         }
 
-        .container div {
-            text-align: center;
-            color: white;
-        }
-
-
-        .satu {
-            background-color: aquamarine;
-            grid-area: header;
-        }
-
-        .dua {
-            background-color: lightsalmon;
-            grid-area: navbar;
-        }
-
-        .tiga {
-            background-color: lightgreen;
-            grid-area: main;
-        }
-
-        .empat {
-            background-color: brown;
-            grid-area: iframe;
-        }
-
-        .lima {
-            background-color: black;
-            grid-area: footer;
+        .kotak {
+            width: 200px;
+            height: 260px;
+            filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.16));
+            border: 1px solid black;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="satu">
-            <p>Header</p>
-        </div>
-        <div class="dua">
-            <p>Navbar</p>
-        </div>
-        <div class="tiga">
-            <p>Main</p>
-        </div>
-        <div class="empat">
-            <p>Iframe</p>
-        </div>
-        <div class="lima">
-            <p>Footer</p>
-        </div>
+        <div class="kotak">1</div>
+        <div class="kotak">2</div>
+        <div class="kotak">3</div>
+        <div class="kotak">4</div>
+        <div class="kotak">5</div>
+        <div class="kotak">6</div>
+        <div class="kotak">7</div>
+        <div class="kotak">8</div>
+        <div class="kotak">9</div>
+        <div class="kotak">10</div>
     </div>
 </body>
 
