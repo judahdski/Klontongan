@@ -36,3 +36,14 @@ while (data[i] < data[anakKiri]) {
 
 console.log(data);
 console.log(i);
+
+let a = data;
+function heapify(input) {
+    maxHeapify();
+}
+
+function hidup() {
+    doa();
+    jalanin();
+    whatNext();
+}
