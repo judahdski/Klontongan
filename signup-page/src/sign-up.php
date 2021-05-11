@@ -12,6 +12,21 @@
         rel="stylesheet">
 </head>
 
+<?php 
+require 'connect2.php';
+if (isset($_POST["submit"])) {
+
+    if (register($_POST)>0){
+        echo "<script>
+            alert('Data berhasil disimpan!');
+            document.location.href='index.php';
+            </script>";
+    } else {
+        echo mysqli_error($conn);
+    }
+}
+?>    
+    
 <body>
     <div class="container">
         <div class="kotak-hitam">
