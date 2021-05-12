@@ -56,10 +56,11 @@
     border-radius: 2px;
 }
 
-.signup-form .button-submit {
+.signup-form .btn-submit {
     width: 273px;
     height: 41px;
     align-self: center;
     background-color: #3e3e3e;
+    color: white;
     border-radius: 3px;
 }

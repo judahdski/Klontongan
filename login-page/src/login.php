@@ -13,7 +13,7 @@
         rel="stylesheet">
 </head>
 
- <?php 
+<?php 
 		require 'connect2.php';
 			if (isset($_POST["login"])){
 				ceklogin($_POST);
@@ -27,7 +27,7 @@
             <form action="" class="signup-form" method="POST">
                 <input type="email" name="email" id="email">
                 <input type="password" name="password" id="password">
-                <button  type="submit" name="login"><a href="toko.php">Masuk</button>
+                <button  type="submit" name="login" class="btn-submit"><a href="toko.php">Masuk</button>
             </form>
         </div>
     </div>
