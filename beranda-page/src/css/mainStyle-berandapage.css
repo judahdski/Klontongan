@@ -146,32 +146,6 @@ main {
 }
 /* akhir dari main */
 
-/* Footer */
-footer {
-    height: 200px;
-    display: flex;
-    justify-content: center;
-}
-
-.footer-page {
-    width: 238px;
-    padding-top: 42.8px;
-}
-
-.group-of-logo {
-    padding-left: 31px;
-    width: 176.51px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.group-copyright {
-    margin-top: 16.4px;
-    display: flex;
-    align-items: center;
-}
-/* akhir dari footer */
-
 /* Responsive design */
 /* for desktop */
 @media screen and (min-width: 991px) and (max-width: 1700px) {
