@@ -1,3 +1,5 @@
 # projectklontongan
 - Format commit = 'nama-page/nama-file/elemen : perubahannya', 
-- JANGAN PERNAH UBAH KODE YANG UDAH ADA, NAMBAHIN BOLEH BIAR GA PUSING ENTAR
+- jangan pernah mengubah kode yang sudah dibuat, kecuali memperbaiki
+- diperbolehkan jika ingin menambahkan
+- nama file gaboleh diubah
