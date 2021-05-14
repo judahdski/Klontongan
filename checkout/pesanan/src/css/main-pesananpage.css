@@ -39,6 +39,7 @@ main {
     display: flex;
     align-items: center;
     background-color: #fec429;
+    z-index: 1;
 }
 
 .nav-mbl a {
@@ -53,6 +54,7 @@ main {
 
 .product {
     grid-area: product;
+    position: relative;
 }
 
 .product .circle-confirm {
@@ -74,16 +76,26 @@ main {
     margin: 0 15px;
 }
 
+.product .group-of-products h2 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+
+    color: rgba(7, 7, 7, 0.5);
+}
+
 .box-confirmation {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     grid-area: box-confirmation;
-    margin: auto;
-    width: 90%;
-    height: 150px;
+    width: 100%;
+    height: 170px;
+    padding: 0 15px;
     color: #0d0c22;
+    z-index: 1;
 }
 
 .box-confirmation .title {
@@ -148,6 +160,7 @@ main {
     }
 
     .nav-dsktp {
+        display: contents;
     }
 
     .nav-mbl {
