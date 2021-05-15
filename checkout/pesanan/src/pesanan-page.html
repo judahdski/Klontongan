@@ -29,7 +29,7 @@
                 <nav class="nav-link">
                     <a href="#">Beranda</a>
                     <a href="#">Toko</a>
-                    <a href="../../tentangKami-page/src/index.html">Tentang Kami</a>
+                    <a href="#">Tentang Kami</a>
                     <a href="#"><img src="../img/header/shopping-cart .png" alt="Shopping Cart" width="20px"></a>
                 </nav>
             </section>
@@ -38,11 +38,11 @@
             <div class="inside-main">
                 <div class="side-main">
                     <nav class="nav-dsktp">
-                        <ul>
-                            <li><a href="#">Pesanan</a></li>
-                            <li><a href="#">Pengiriman</a></li>
-                            <li><a href="#">Pembayaran</a></li>
-                            <li><a href="#">Selesai</a></li>
+                        <ul class="breadcrumb">
+                            <li><a href="#" class="nav-dsktp-btn active">Pesanan</a></li>
+                            <li><a href="#" class="nav-dsktp-btn">Pengiriman</a></li>
+                            <li><a href="#" class="nav-dsktp-btn">Pembayaran</a></li>
+                            <li><a href="#" class="nav-dsktp-btn">Selesai</a></li>
                         </ul>
                     </nav>
                     <nav class="nav-mbl">
@@ -51,11 +51,15 @@
                     </nav>
                 </div>
                 <div class="product">
-                    <div class="all-selected">
-                        <a href="#"><span class="circle-confirm"></span></a>
+                    <div class="selected-all">
+                        <label for="box-1" class="box-confirm">
+                            <input type="checkbox" name="selected-all" id="box-1" checked="tekan">
+                            <span class="checked"></span>
+                        </label>
                         <p>Pilih Semua</p>
                     </div>
-                    <hr width="90%" style="margin: auto;">
+                    <hr width="90%"
+                        style="margin: auto; height: 5px; border-width: 0; color: black; background-color: #dddddd;">
                     <div class="group-of-products">
                         <h2>Keranjangnya kosong harap diisi!</h2>
                     </div>
