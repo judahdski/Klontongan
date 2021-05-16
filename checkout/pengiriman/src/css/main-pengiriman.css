@@ -115,6 +115,10 @@ a.btn-side-main {
     margin-top: 5.5px;
 }
 
+a.btn-side-main:hover {
+    background-color: #ecb92c;
+}
+
 @media screen and (min-width: 768px) {
     .inside-main {
         width: 90%;
