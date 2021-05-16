@@ -24,10 +24,6 @@ main {
     grid-area: nav;
 }
 
-.main-content {
-    grid-area: main-content;
-}
-
 .main-nav .nav-desktop {
     display: none;
 }
@@ -52,6 +48,73 @@ main {
     grid-area: side-main;
 }
 
+.main-content {
+    grid-area: main-content;
+}
+
+.side-main {
+    grid-area: side-main;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 30px;
+}
+
+.side-main .text-side-main {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 8px 0;
+}
+
+.side-main h4.title-side-main {
+    padding: 0 0 15px 0;
+}
+
+.side-main .divider {
+    width: 100%;
+    color: #ccc;
+}
+
+.text-side-main:nth-child(6) {
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.text-side-main:nth-child(6) span {
+    color: red;
+}
+
+.text-side-main:nth-child(7) {
+    font-size: 0.5em;
+}
+
+.syaratdanketentuan {
+    font-size: 0.75em;
+}
+
+.syaratdanketentuan a {
+    color: #fec429;
+}
+
+.syaratdanketentuan a:hover {
+    color: #dfae27;
+}
+
+a.btn-side-main {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.0625em;
+    line-height: 50px;
+    text-decoration: none;
+    color: white;
+    background-color: #fec429;
+    margin-top: 5.5px;
+}
+
 @media screen and (min-width: 768px) {
     .inside-main {
         width: 90%;
@@ -62,11 +125,73 @@ main {
             'nav nav'
             'main-content side-main';
     }
+
+    .main-nav .nav-desktop {
+        display: block;
+    }
+
+    .nav-desktop ul.breadcrumb {
+        padding: 28px 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    ul.breadcrumb li {
+        list-style: none;
+        font-size: 1.25em;
+    }
+
+    ul.breadcrumb li + li::before {
+        content: url(../../img/main/main-nav/right-arrow-angle.png) '';
+        color: black;
+        padding: 20px;
+    }
+
+    ul.breadcrumb li a {
+        color: #0275d8;
+        text-decoration: none;
+    }
+
+    ul.breadcrumb li a:hover {
+        color: #01447e;
+        text-decoration: underline;
+    }
+
+    ul.breadcrumb .active {
+        font-size: 1.3em;
+        color: #fec429;
+    }
+
+    ul.breadcrumb .active:hover {
+        color: #fec429;
+    }
+
+    .main-nav .nav-mobile {
+        display: none;
+    }
+
+    .side-main {
+        position: static;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .side-main .box-confirmation {
+        width: 280.5px;
+        padding: 20px 10px;
+        border-radius: 10px;
+        box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.16);
+    }
 }
 
 @media screen and (min-width: 1170px) {
     .inside-main {
         width: 80%;
         margin: auto;
+    }
+
+    .side-main .box-confirmation {
+        width: 320.5px;
     }
 }

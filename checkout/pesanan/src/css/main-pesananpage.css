@@ -215,15 +215,14 @@ main {
         display: contents;
     }
 
-    /* Style the list */
     ul.breadcrumb {
         padding: 10px 16px;
-        list-style: none;
+        display: flex;
+        align-items: center;
     }
 
-    /* Display list items side by side */
     ul.breadcrumb li {
-        display: inline;
+        list-style: none;
         font-size: 1.25em;
     }
 
