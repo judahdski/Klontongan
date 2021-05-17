@@ -12,10 +12,13 @@
 }
 
 main {
+    width: 100%;
     grid-area: main;
 }
 
 .inside-main {
+    max-width: 1170px;
+    margin: auto;
     display: grid;
     grid-template: 'nav nav' auto 'main-content main-content' auto 'side-main side-main' auto/ 1.5fr 1fr;
 }
@@ -55,7 +58,7 @@ main {
 
 .main-content {
     grid-area: main-content;
-    height: 1500px;
+    height: 600px;
 }
 
 .main-content .title-main-content,
@@ -84,11 +87,103 @@ main {
     text-decoration: none;
 }
 
+a.btn-add-address:hover {
+    background-color: rgb(245, 245, 245);
+}
+
 .main-content hr.divider {
     height: 5px;
     background-color: #ddd;
     border: none;
     border-radius: 3px;
+}
+
+.main-content a.btn-add-courier {
+    display: block;
+    padding: 15px 30px;
+    background-color: #fec429;
+    border-radius: 10px;
+    width: 203px;
+    color: white;
+
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.15em;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-content a.btn-add-courier:hover {
+    background-color: #ebb729;
+}
+
+a.btn-add-courier::after {
+    content: '';
+    display: block;
+    width: 17px;
+    height: 17px;
+    background-image: url(../../img/main/main-content/add.svg);
+    background-size: 17px;
+}
+
+.confirm-insurance {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.confirm-insurance input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+}
+
+.confirm-insurance .checked {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 19px;
+    height: 19px;
+    border-radius: 4px;
+    background-color: rgb(228, 228, 228);
+}
+
+.confirm-insurance:hover .checked {
+    background-color: #ccc;
+}
+
+.confirm-insurance input:checked ~ .checked {
+    background-color: #fec429;
+}
+
+.checked::after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.confirm-insurance input:checked ~ .checked::after {
+    display: block;
+}
+
+.checked::after {
+    top: 2.7px;
+    left: 6px;
+    width: 4.5px;
+    height: 8.5px;
+    border: solid white;
+    border-width: 0 2.3px 2.3px 0;
+    transform: rotate(45deg);
+}
+
+.main-content .confirm-insurance::after {
+    content: 'Asuransi Pengiriman';
+    position: relative;
+    left: 35px;
 }
 
 .side-main {
@@ -220,7 +315,8 @@ a.btn-side-main:hover {
         position: static;
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
+        align-items: flex-start;
         background-color: #fff;
         z-index: 0;
         box-shadow: none;
@@ -228,7 +324,6 @@ a.btn-side-main:hover {
 
     .side-main .box-confirmation {
         width: 280.5px;
-        height: 309.5px;
         padding: 20px 10px;
         border-radius: 10px;
         box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.16);
