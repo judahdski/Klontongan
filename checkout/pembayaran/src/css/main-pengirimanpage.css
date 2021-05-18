@@ -15,3 +15,69 @@ main {
     width: 100%;
     grid-area: main;
 }
+
+.inside-main {
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template: 'nav' auto 'content' auto 'side-main' auto / 1fr;
+}
+
+.main-nav {
+    grid-area: nav;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fec429;
+    z-index: 1;
+}
+
+.main-nav .nav-desktop {
+    display: none;
+}
+
+.main-nav .nav-mobile {
+    display: flex;
+}
+
+.nav-mobile a {
+    padding: 20px;
+}
+
+.nav-mobile h4.title-page {
+    font-size: 1.25em;
+    padding: 17.3px 0;
+}
+
+.side-main {
+    grid-area: side-main;
+    background-color: lightskyblue;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 10px;
+}
+
+.side-main h4.title-side-main,
+.sub-title-side-main,
+.jumlah {
+    font-size: 1.03em;
+}
+
+.side-main .text-side-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-side-main,
+.text-side-main {
+    padding: 0 0 15px 0;
+}
+
+.side-main hr.divider {
+    background-color: #ddd;
+    margin: 5px 0 15px 0;
+}
