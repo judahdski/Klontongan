@@ -18,152 +18,80 @@
 /* main */
 main {
     width: 100%;
+    padding: 120px 70px;
+    background-color: #f0f4f7;
 }
 
-.inside-main {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 102px auto;
-    grid-template-areas:
-        'kategori'
-        'menu utama';
-}
-
-/* kategori */
-.kategori {
+main .template-of-card {
     width: 100%;
-}
 
-.group-of-kategori {
-    margin: auto;
-    width: 715px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.group-of-kategori a {
-    text-decoration: none;
-    color: black;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.group-of-kategori a:hover {
-    transform: scale(1.1);
-    font-weight: 500;
-    color: #0d0c22;
-}
-
-.pembatas-kategori {
-    margin: auto;
-    width: 80%;
-}
-
-/* menu-utama */
-.menu-utama {
-    margin: auto;
-    width: 80%;
-}
-
-.inside-menu-utama {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-        'spesial-hari-ini'
-        'sayuran'
-        'buahan'
-        'bumbu-dapur'
-        'sembako';
+    grid-template: 1fr / repeat(auto-fill, minmax(220px, 1fr));
+    row-gap: 50px;
+    place-items: center;
 }
 
-.spesial-hariIni {
-    grid-area: spesial-hari-ini;
-}
-
-.sayuran {
-    grid-area: sayuran;
-}
-
-.buahan {
-    grid-area: buahan;
-}
-
-.bumbu-dapur {
-    grid-area: bumbu-dapur;
-}
-
-.sembako {
-    grid-area: sembako;
-}
-
-.big-box {
-    height: 396px;
-}
-
-.big-box .title,
-.caption {
-    padding-left: 40px;
-}
-
-.big-box .title {
-    padding-bottom: 10px;
-    font-size: 2em;
-    color: #161616;
-}
-
-.big-box .caption {
-    padding-bottom: 34px;
-    font-weight: 400;
-    font-size: 0.95em;
-    color: #271f1f;
-}
-
-.group-of-products {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.box {
+.card {
+    width: 210px;
+    height: 280px;
     background-color: white;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 15px;
+
+    position: relative;
 }
 
-.box .name-products {
-    font-weight: 600;
-    font-size: 1.05em;
-    color: #0d0c22;
-}
-
-.box .price-products {
-    font-weight: 400;
+.card span.qategory {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 80px;
+    height: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #007580;
+    color: #fec429;
     font-size: 1em;
-    color: #0d0c22;
-}
-
-.image-products {
-    width: 100%;
-    height: 58.3%;
-    object-fit: contain;
-    object-position: center;
-}
-
-.btn-pesan {
-    margin: auto;
-    width: 68%;
-    padding: 5% 0;
-    background-color: #fec429;
-    border-radius: 5px;
     text-align: center;
+    z-index: 1;
 }
 
-.btn-pesan a {
-    padding: 10px 45px;
+.card img.products-picture {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card h4.products-name {
+    font-weight: 600;
+    font-size: 1.125em;
+    margin: 10px 0 5px 0;
+}
+
+.card p.products-price {
     font-weight: 500;
+    font-size: 1em;
+    color: #fec429;
+    margin-bottom: 10px;
+}
+
+.card a.btn-pesan {
+    display: block;
+    background-color: #fec429;
+    padding: 8px 70px;
+    font-size: 1em;
     text-decoration: none;
     color: white;
+    border-radius: 5px;
 }
+
+.card a.btn-pesan:hover {
+    background-color: #f5be29;
+}
+
 /* akhir dari main */
 
 /* Responsive design */

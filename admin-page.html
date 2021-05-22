@@ -12,7 +12,7 @@
 
     <!-- My CSSS -->
     <link rel="stylesheet" href="css/admin-page/style-admin.css">
-    <title>Hello, world!</title>
+    <title> Halaman Admin K'lontongan</title>
 </head>
 
 <body>
@@ -35,14 +35,16 @@
             </a>
 
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li><a class="dropdown-item" href="#tambah-barang">Tambah Barang dong</a></li>
-                <li><a class="dropdown-item" href="#lihat-data-pembeli">Lihat Data Pembeli doang kok</a></li>
+                <li><a class="dropdown-item" href="#tambah-barang" id="dropdown-item-tambah-barang">Tambah Barang
+                        dong</a></li>
+                <li><a class="dropdown-item" href="#lihat-data-pembeli" id="dropdown-item-data-pembeli">Lihat Data
+                        Pembeli doang kok</a></li>
             </ul>
         </div>
     </section>
 
-    <div class="row justify-content-center mb-5 tambah-barang">
-        <section id="tambah-barang" class="col-10 col-md-8 col-xl-5">
+    <div class="row p-5 justify-content-center mb-5 tambah-barang" id="tambah-barang">
+        <section class="col-10 col-md-8 col-xl-5">
             <h3>Tambah Barang</h3>
             <form action="..." method="POST">
                 <div class="mb-3">
@@ -63,15 +65,13 @@
                 </div>
                 <div class="d-flex justify-content-between">
                     <button type="button" class="btn btn-warning" name="...">Simpan</button>
-                    <a href="#" class="btn btn-link">Back to admin</a>
+                    <a href="#" class="btn btn-link back-to-admin">Back to admin</a>
                 </div>
             </form>
-
         </section>
-
     </div>
 
-    <div class="row justify-content-center data-pembeli">
+    <div class="row p-5 justify-content-center data-pembeli">
         <section id="lihat-data-pembeli" class="col-11 col-md-10 col-xl-8">
             <h3>Data Pembeli</h3>
             <table class="table  table-hover">
@@ -94,9 +94,11 @@
                     </tr>
                 </tbody>
             </table>
-            <a href="#" class="btn btn-link">Back to admin</a>
+            <a href="#" class="btn btn-link back-to-admin">Back to admin</a>
         </section>
     </div>
+
+    <script src="js/halaman-admin.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
