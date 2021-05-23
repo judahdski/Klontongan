@@ -21,15 +21,18 @@
 ?>
 
 <body>
-    <div class="container">
-        <div class="kotak-hitam">
-            <h3>Selamat Datang</h3>
-            <form action="" class="signup-form" method="POST">
-                <input type="email" name="email" id="email">
-                <input type="password" name="password" id="password">
-                <button  type="submit" name="login" class="btn-submit"><a href="toko.php">Masuk</button>
-            </form>
-        </div>
+<div class="container">
+        <nav>
+            <img src="img/login-signup/logo-header.png" alt="Logo Klontongan" class="logo-picture">
+            <a href="#"><img src="img/login-signup/close.svg" alt="back to home" class="btn-exit"></a>
+        </nav>
+        <h3 class="title-page">Masuk</h3>
+        <p class="to-signup">Belum punya akun? <a href="#" class="link-to-signup">Daftar di sini</a></p>
+        <form action="" class="signup-form" method="POST">
+            <input type="email" name="email" id="email" placeholder="E-mail">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <button type="submit" name="login" class="btn-login"><a href="toko.php">Masuk</button>
+        </form>
     </div>
 </body>
 

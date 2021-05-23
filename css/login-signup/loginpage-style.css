@@ -73,12 +73,12 @@ form.signup-form {
 }
 
 input {
-    margin: 20px;
+    margin: 0 0 15px;
     display: block;
     border: none;
     width: 100%;
-    height: 40px;
-    padding: 10.5px 12px;
+    height: 45px;
+    padding: 10.5px 15px;
     background-color: #f7f7f7;
     border-radius: 5px;
 
@@ -86,7 +86,8 @@ input {
 }
 
 input:hover {
-    background-color: #eeeeee;
+    background-color: #fff;
+    border: 1px solid #fec429;
 }
 
 input::placeholder {
@@ -96,7 +97,7 @@ input::placeholder {
 }
 
 button {
-    margin: 20px;
+    margin: 20px 0 0;
     display: block;
     width: 146px;
     height: 36px;
@@ -104,9 +105,97 @@ button {
     border-radius: 18px;
 
     border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f1bc28;
 }
 
 button a {
     text-decoration: none;
     color: white;
+    padding: 10px 55px;
+}
+
+@media screen and (min-width: 800px) {
+    .container {
+        padding: 20px 55px;
+    }
+
+    nav img.logo-picture {
+        width: 150px;
+    }
+
+    nav a {
+        height: 23px;
+    }
+
+    nav a img.btn-exit {
+        width: 23px;
+    }
+
+    .title-page {
+        padding: 210px 0 20px;
+    }
+
+    .to-signup {
+        padding: 0 0 45px;
+    }
+
+    h3.title-page {
+        font-size: 3em;
+        font-weight: 500;
+    }
+
+    p.to-signup {
+        font-size: 1em;
+    }
+
+    /* Form */
+    input {
+        margin: 15px;
+        width: 80%;
+        padding: 11px 20px;
+    }
+
+    button {
+        width: 200px;
+        height: 45px;
+        border-radius: 23px;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    .container {
+        padding: 30px 60px;
+    }
+
+    nav img.logo-picture {
+        width: 180px;
+    }
+
+    .title-page {
+        padding: 100px 0 15px;
+    }
+
+    .to-signup {
+        padding: 0 0 50px;
+    }
+
+    h3.title-page {
+        font-size: 3em;
+    }
+
+    p.to-signup {
+        font-size: 1.125em;
+    }
+
+    /* Form */
+    input {
+        margin: 0 0 20px;
+        height: 55px;
+        padding: 17px 20px;
+        width: 40%;
+    }
 }
