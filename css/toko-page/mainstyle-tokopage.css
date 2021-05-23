@@ -25,13 +25,13 @@ main {
 main .template-of-card {
     width: 100%;
 
-    display: grid;
-    grid-template: 1fr / repeat(auto-fill, minmax(220px, 1fr));
-    row-gap: 50px;
-    place-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card {
+    margin: 20px 30px 20px 0;
     width: 210px;
     height: 280px;
     background-color: white;
