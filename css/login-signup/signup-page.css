@@ -2,77 +2,269 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container {
-    height: 100vmin;
     width: 100%;
-    background-image: url(../img/bg-signup-page.jpg);
-    background-size: cover;
-    background-position: center;
-
-    display: grid;
+    padding: 15px 25px;
 }
 
-.kotak-hitam {
-    margin: auto;
-    width: 945px;
-    height: 470px;
-    background-color: #35242469;
-
-    display: grid;
-    grid-template-columns: 352px;
-    grid-template-rows: 50px 341px;
-    grid-template-areas:
-        'buat'
-        'form';
-
-    place-content: center;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
 }
 
-.kotak-hitam h3 {
-    grid-area: buat;
+nav img.logo-picture {
+    width: 120px;
+}
 
+nav span.close-btn img.close {
+    width: 18px;
+}
+
+h3.title-page,
+p.to-login {
     text-align: center;
-    font-weight: 400;
-    font-size: 2em;
-    font-family: 'Roboto', sans-serif;
-    color: white;
 }
 
-.kotak-hitam form {
-    grid-area: form;
+.title-page {
+    padding: 13.7px 0 10px;
+}
 
+.to-login {
+    padding: 0 0 30px;
+}
+
+h3.title-page {
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+p.to-login {
+    font-weight: 300;
+    font-size: 0.875em;
+}
+
+a.link-to-signup {
+    color: #1f91ff;
+}
+
+a.link-to-signup:hover {
+    text-decoration: none;
+    color: #1d83e2;
+    font-weight: 400;
+}
+
+/* Form */
+form.signup-form {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
 }
 
-.kotak-hitam form .bagi-dua {
+input {
+    margin: 0 0 15px;
+    display: block;
+    border: none;
+    background-color: #f7f7f7;
+    width: 100%;
+    height: 40px;
+    padding: 10.5px 10px;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+input::placeholder {
+    font-weight: 500;
+    color: #fec429;
+}
+
+input:hover,
+textarea:hover {
+    background-color: #fff;
+    border: 1px solid #fec429;
+}
+
+textarea {
+    margin: 0 0 30px;
+    display: block;
+    border: none;
+    background-color: #f7f7f7;
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+textarea::placeholder {
+    font-weight: 500;
+    color: #fec429;
+}
+
+button {
+    display: block;
+    width: 146px;
+    height: 36px;
+    background-color: #fec429;
+    border-radius: 18px;
+    border: none;
+}
+
+button:hover {
+    background-color: #f5be27;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    padding: 10px 55px;
+}
+
+.name-field {
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.bagi-dua .nama {
-    width: 170px;
-    height: 45px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border: none;
-    border-radius: 2px;
+input#firstname {
+    margin: 0 15px 15px 0;
+}
+input#lastname {
+    margin: 0 0 15px 15px;
 }
 
-.signup-form input {
-    width: 352px;
-    height: 45px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border: none;
-    border-radius: 2px;
+p.term-of-use {
+    padding: 20px 0 0;
+    font-weight: lighter;
+    font-size: 10px;
+    text-align: center;
 }
 
-.signup-form .button-submit {
-    width: 273px;
-    height: 41px;
-    align-self: center;
-    background-color: #3e3e3e;
-    border-radius: 3px;
+@media screen and (min-width: 800px) {
+    .container {
+        padding: 20px 55px;
+    }
+
+    nav {
+        padding: 0;
+    }
+
+    nav img.logo-picture {
+        width: 135px;
+    }
+
+    nav span.close-btn img.close {
+        width: 23px;
+    }
+
+    .title-page {
+        padding: 30px 0 19px;
+    }
+
+    .to-login {
+        padding: 0 0 50px;
+    }
+
+    h3.title-page {
+        font-size: 3em;
+    }
+
+    p.to-login {
+        font-size: 1em;
+    }
+
+    /* Form */
+    input {
+        margin: 0 0 25px;
+        width: 75%;
+        height: 50px;
+        padding: 14.5px 20px;
+    }
+
+    textarea {
+        margin: 0 0 40px;
+        width: 75%;
+        height: 120px;
+        padding: 10px 15px;
+    }
+
+    button {
+        width: 200px;
+        height: 40px;
+        border-radius: 23px;
+    }
+
+    button a {
+        padding: 13px 81px;
+    }
+
+    .name-field {
+        width: 75%;
+    }
+
+    input#firstname {
+        margin: 0 10px 25px 0;
+    }
+
+    input#lastname {
+        margin: 0 0 25px 10px;
+    }
+
+    p.term-of-use {
+        font-weight: 300;
+        font-size: 14px;
+    }
+
+    p.term-of-use a {
+        color: #1d83e2;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    .container {
+        padding: 10px 60px;
+    }
+
+    nav img.logo-picture {
+        width: 150px;
+    }
+
+    .title-page {
+        padding: 0 0 10px;
+    }
+
+    .to-login {
+        padding: 0 0 25px;
+    }
+
+    /* Form */
+    input {
+        margin: 0 0 15px;
+        width: 40%;
+        height: 55px;
+        padding: 17px 20px;
+    }
+
+    textarea {
+        margin: 0 0 25px;
+        width: 40%;
+        height: 100px;
+        padding: 32px 20px;
+    }
+
+    .name-field {
+        width: 40%;
+    }
+
+    input#firstname,
+    input#lastname {
+        width: 50%;
+    }
 }
