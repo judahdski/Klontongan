@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 100%;
+    padding: 23px 25px 35px;
+    background-color: #f0f4f7;
+}
+
+nav,
+aside {
+    display: none;
+}
+
+.main-content {
+    width: 100%;
+}
+
+.title-main-content {
+    padding: 0 0 5px;
+}
+
+h2.title-main-content {
+    font-weight: 500;
+    font-size: 1.375em;
+}
+
+p.caption-main-content {
+    font-weight: 400;
+    font-size: 0.75em;
+}
