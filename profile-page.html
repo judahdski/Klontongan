@@ -17,26 +17,39 @@
 </head>
 
 <body>
+    <div class="alert-for-small-device">
+        <h2>sorry we are not available here</h2>
+    </div>
     <div class="container">
-        <nav class="main-nav">
+        <nav class="nav-header">
             <img src="img/profile/logo-header.png" alt="K'lontongan" class="logo-picture">
-            <div class="profile-picture"><img src="..." alt="..." class="picture-profile"></div>
+            <div class="profile-picture"><img src="img/profile/foto-orang.jpg" alt="Foto orang">
+            </div>
         </nav>
         <aside class="side-nav">
             <a href="#" class="to-homepage">Kembali ke beranda</a>
-            <div class="profile"></div>
-            <div class="side-nav-items">Pengaturan akun</div>
-            <div class="side-nav-items">Keranjang</div>
-            <div class="side-nav-items">PoinKu</div>
-            <div class="side-nav-items">Halaman admin</div>
+            <div class="profile-desktop">
+                <img src="img/profile/foto-orang.jpg" alt="Foto-user" class="picture-user">
+                <p class="user-name">Desby Arcth</p>
+                <p class="user-email">derbyAR@gmail.com</p>
+            </div>
+            <div class="side-nav-items active-page"><a href="#">Pengaturan akun</a></div>
+            <div class="side-nav-items"><a href="#">Keranjang</a></div>
+            <div class="side-nav-items"><a href="#">PoinKu</a></div>
+            <div class="side-nav-items"><a href="#">Halaman admin</a></div>
         </aside>
         <div class="main-content">
             <h2 class="title-main-content">Pengaturan Akun</h2>
             <p class="caption-main-content">Lihat dan perbarui detail akun Anda, profil, dan lainnya</p>
+            <div class="profile-mobile-tablet">
+                <img src="img/profile/foto-orang.jpg" alt="Foto-user" class="picture-user">
+                <p class="user-name">Desby Arcth</p>
+                <p class="user-email">derbyAR@gmail.com</p>
+            </div>
             <div class="personal-info">
                 <h3 class="title-personal-info">Info pribadi</h3>
                 <section class="info-setup">
-                    <form action="">
+                    <form action="" method="POST" class="personal">
                         <div class="firstname">
                             <label for="firstname">Nama Depan</label>
                             <input type="text" name="firstname" id="firstname">
@@ -51,7 +64,7 @@
                         </div>
                         <div class="address">
                             <label for="address">Alamat</label>
-                            <input type="text" name="address" id="address">
+                            <textarea name="address" id="address"></textarea>
                         </div>
                     </form>
                     <div class="picture-setup">
@@ -62,7 +75,7 @@
             </div>
             <div class="account-info">
                 <h3 class="title-account-info">Akunmu</h3>
-                <form action="" method="post">
+                <form action="" method="post" class="account">
                     <div class="email">
                         <label for="email">E-mail</label>
                         <input type="text" name="email" id="email">

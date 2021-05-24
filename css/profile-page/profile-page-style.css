@@ -5,6 +5,9 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.alert-for-small-device {
+    display: none;
+}
 .container {
     width: 100%;
     padding: 23px 25px 35px;
@@ -27,9 +30,405 @@ aside {
 h2.title-main-content {
     font-weight: 500;
     font-size: 1.375em;
+    color: #162d3d;
 }
 
 p.caption-main-content {
     font-weight: 400;
     font-size: 0.75em;
+    color: #32536a;
+}
+
+.profile-mobile-tablet {
+    margin: 35px 0 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-mobile-tablet img.picture-user {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-mobile-tablet p.user-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #325373;
+}
+
+.profile-mobile-tablet p.user-email {
+    font-size: 12px;
+    font-weight: lighter;
+    color: #325373;
+}
+
+.personal-info,
+.account-info {
+    background-color: #fff;
+    border-radius: 5px;
+    border: none;
+}
+
+.personal-info h3.title-personal-info,
+h3.title-account-info {
+    padding: 15px 25px;
+    border-bottom: 0.785px solid #d5e6f2;
+    font-weight: 400;
+    font-size: 1em;
+    color: #1a232b;
+}
+
+.personal-info .info-setup {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-setup form.personal {
+    order: 2;
+}
+
+form.personal div {
+    padding: 30px 15px;
+    border-bottom: 1px solid #dfe5eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form.personal div:last-child {
+    padding: 25px 15px;
+    border-bottom: none;
+}
+
+form.personal label {
+    font-weight: lighter;
+    font-size: 14px;
+    color: #1a232b;
+}
+
+form input,
+textarea {
+    display: block;
+    width: 175px;
+    height: 35px;
+    border: 0.5px solid #fec5297a;
+    border-radius: 5px;
+    padding: 8px 10px;
+}
+
+form.personal textarea {
+    width: 210px;
+    height: 80px;
+}
+
+.info-setup .picture-setup {
+    order: 1;
+    padding: 20px 105px 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.account-info {
+    margin: 35px 0 0;
+}
+
+.account-info form.account div {
+    padding: 30px 15px;
+    border-bottom: 1px solid #dfe5eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form.account label {
+    font-weight: lighter;
+    font-size: 14px;
+    color: #1a232b;
+}
+
+.main-content .saveorcancel {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px 10px 0 0;
+}
+
+.saveorcancel a.save-changes {
+    margin: 0 10px 0 0;
+    padding: 9px 20px;
+    background-color: #fec429;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+}
+
+.saveorcancel a.cancel-changes {
+    padding: 8px 18px;
+    border: 1px solid #ff5151;
+    border-radius: 5px;
+    font-weight: lighter;
+    font-size: 12px;
+    text-decoration: none;
+    color: #ff5151;
+}
+
+a.save-changes:hover {
+    transform: scale(1.04);
+    background-color: #ecb725;
+}
+
+a.cancel-changes:hover {
+    transform: scale(1.02);
+    background-color: #ff5151;
+    color: white;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 40px 75px 40px 50px;
+    }
+
+    .main-content {
+        margin: auto;
+    }
+
+    h2.title-main-content {
+        font-size: 28px;
+    }
+
+    p.caption-main-content {
+        font-weight: 300;
+        font-size: 14px;
+    }
+
+    .profile-mobile-tablet {
+        margin: 57px 0 60px;
+    }
+
+    .profile-mobile-tablet img.picture-user {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-mobile-tablet p.user-name {
+        font-size: 20px;
+        padding: 10px 0 5px;
+    }
+
+    .profile-mobile-tablet p.user-email {
+        font-size: 16px;
+    }
+
+    .personal-info h3.title-personal-info,
+    h3.title-account-info {
+        padding: 15px 30px;
+        font-size: 1.125em;
+    }
+
+    .personal-info .info-setup {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .info-setup form.personal {
+        display: block;
+        width: 70%;
+        order: 1;
+        padding: 0 0 0 27px;
+    }
+
+    form.personal input {
+        width: 246px;
+    }
+
+    form.personal textarea {
+        width: 246px;
+        height: 80px;
+    }
+
+    .info-setup .picture-setup {
+        width: 30%;
+        order: 2;
+    }
+
+    .info-setup .picture-setup {
+        padding: 34px 0 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .picture-setup p {
+        font-weight: 300;
+        font-size: 1em;
+    }
+
+    .account-info form.account {
+        padding: 0 50px 0 56px;
+    }
+
+    form.account input {
+        width: 301px;
+        height: 35px;
+        padding: 8px 15px;
+    }
+
+    .saveorcancel a.save-changes {
+        font-size: 16px;
+        padding: 10px 23px;
+    }
+
+    .saveorcancel a.cancel-changes {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .container {
+        padding: 0;
+        display: grid;
+        grid-template: 'nav-header nav-header' 80px 'side-nav main-content' auto/ 250px auto;
+    }
+
+    nav,
+    aside {
+        display: block;
+    }
+
+    .nav-header {
+        grid-area: nav-header;
+    }
+
+    .nav-header {
+        width: 100%;
+        height: 80px;
+        padding: 0 105px;
+        background-color: #ffce4d;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-header .profile-picture {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .profile-picture img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .side-nav {
+        grid-area: side-nav;
+    }
+
+    .side-nav {
+        width: 250px;
+        background-color: #fff;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.16);
+        padding: 20px 0 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .to-homepage {
+        align-self: center;
+    }
+
+    .side-nav a.to-homepage {
+        text-align: center;
+        text-decoration: none;
+        color: #32536a;
+    }
+
+    .side-nav .profile-desktop {
+        padding: 30px 60px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-desktop img.picture-user {
+        width: 80px;
+        height: 80px;
+        overflow: hidden;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .profile-desktop p.user-name {
+        font-weight: 600;
+        font-size: 18px;
+        color: #325373;
+        padding: 10px 0 0;
+    }
+
+    .profile-desktop p.user-email {
+        font-weight: 300;
+        font-size: 12px;
+        color: #325373;
+    }
+
+    .side-nav .side-nav-items {
+        margin: 20px 0;
+        padding: 10px 40px;
+    }
+
+    .side-nav-items a {
+        text-decoration: none;
+        color: #325373;
+        font-size: 14px;
+    }
+
+    .active-page {
+        background-color: #fec429;
+    }
+
+    .active-page a {
+        text-decoration: none;
+        color: white;
+    }
+    .side-nav-items:hover {
+        background-color: #fec429;
+    }
+
+    .side-nav-items:hover a {
+        color: white;
+    }
+
+    .main-content {
+        grid-area: main-content;
+    }
+
+    .main-content {
+        padding: 45px 50px;
+    }
+
+    .main-content .personal-info {
+        margin: 50px 0 25px;
+    }
+
+    .main-content .account-info {
+        margin: 50px 0;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .container {
+        display: none;
+    }
+
+    .alert-for-small-device {
+        display: block;
+    }
 }
