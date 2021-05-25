@@ -26,7 +26,7 @@ if (isset($_POST["submit"])) {
 <body>
     <div class="container">
         <header>
-            <img src="../img/header/logo-header.png" alt="K'lontongan" class="logo-header">
+            <img src="img/header/logo-header.png" alt="K'lontongan" class="logo-header">
             <nav class="nav-link">
                 <a href="#" class="nav-items">Beranda</a>
                 <a href="#" class="nav-items">Toko</a>
@@ -67,12 +67,12 @@ if (isset($_POST["submit"])) {
         </main>
         <footer>
             <div class="social-media">
-                <a href="#"><img src="../img/footer/instagram-hitam.svg" alt="Instagram"></a>
-                <a href="#"><img src="../img/footer/line-hitam.svg" alt="Line"></a>
-                <a href="#"><img src="../img/footer/facebook-hitam.svg" alt="Facebook"></a>
+                <a href="#"><img src="img/footer/instagram-hitam.svg" alt="Instagram"></a>
+                <a href="#"><img src="img/footer/line-hitam.svg" alt="Line"></a>
+                <a href="#"><img src="img/footer/facebook-hitam.svg" alt="Facebook"></a>
             </div>
             <span class="copyright">
-                <p> Copyright by &nbsp;</p><a href="#"> <img src="../img/footer/logo-footer.png" alt="K'lontongan"
+                <p> Copyright by &nbsp;</p><a href="#"> <img src="img/footer/logo-footer.png" alt="K'lontongan"
                         class="logo-footer"></a>
             </span>
         </footer>
