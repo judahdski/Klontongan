@@ -26,45 +26,55 @@ if (isset($_POST["submit"])) {
 <body>
     <div class="container">
         <header>
-            <section class="header-page">
-                <div class="header-logo">
-                    <a href="#"><img src="img/header/logo-header.png" alt="K'lontongan"></a>
+            <img src="../img/header/logo-header.png" alt="K'lontongan" class="logo-header">
+            <nav class="nav-link">
+                <a href="#" class="nav-items">Beranda</a>
+                <a href="#" class="nav-items">Toko</a>
+                <a href="#" class="nav-items">Tentang kami</a>
+                <a href="#" class="profile-user"><img src=".." alt="" class="picture-user"></a>
+            </nav>
+            <div class="nav-mobile">
+                <div class="hamburger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
                 </div>
-                <nav class="nav-link">
-                    <a href="beranda-page.php">Beranda</a>
-                    <a href="toko-page.php">Toko</a>
-                    <a href="tentangkami.php">Tentang Kami</a>
-                    <a href="#"><img src="img/header/shopping-cart-hitam.svg" alt="Shopping Cart" width="20px"></a>
-                </nav>
-            </section>
+                <ul class="nav-link-mobile">
+                    <li class="nav-items-mobile" href="#">Beranda</li>
+                    <li class="nav-items-mobile" href="#">Toko</li>
+                    <li class="nav-items-mobile" href="#">Tentang kami</li>
+                </ul>
+            </div>
         </header>
         <main>
             <div class="template-of-card">
                 <?php foreach($sql as $row) : ?>
                                 <div class="card">
-                                <span class="qategory"><?= $row['deskripsi']; ?></span>
-                                    <img src="<?= $row['pict']; ?>" class="products-picture">
-                                    <h4 class="products-name"><?= $row['nama']; ?></h4>
-                                    <p class="products-price"><?= $row['harga']; ?></p>
-                                    <input type="hidden" value="<?= $row['id_barang'] ?>" name="id_barang">
-                                    <a href="#" class="btn-pesan">pesan</a>
+                                    <div class="image-products">
+                                        <span class="category"><?= $row['deskripsi']; ?></span>
+                                        <img src="<?= $row['pict']; ?>" class="products-picture">
+                                    </div>
+                                    <div class="description-products">
+                                        <h4 class="products-name"><?= $row['nama']; ?></h4>
+                                        <p class="products-price"><?= $row['harga']; ?></p>
+                                        <input type="hidden" value="<?= $row['id_barang'] ?>" name="id_barang">
+                                        <a href="#" class="btn-pesan">pesan</a>
+                                    </div>
                                 </div>
                             <br>
                                 <?php endforeach; ?>
             </div>
         </main>
         <footer>
-            <section class="footer-page">
-                <div class="group-of-logo">
-                    <a href="#"><img src="img/footer/instagram-hitam.svg" alt="Instagram" width="23px"></a>
-                    <a href="#"><img src="img/footer/line-hitam.svg" alt="Line" width="23px"></a>
-                    <a href="#"><img src="img/footer/facebook-hitam.svg" alt="Facebook" width="23px"></a>
-                </div>
-                <div class="group-copyright">
-                    <p>Copyright by</p>
-                    <img src="img/footer/logo-footer.png" alt="K'lontongan">
-                </div>
-            </section>
+            <div class="social-media">
+                <a href="#"><img src="../img/footer/instagram-hitam.svg" alt="Instagram"></a>
+                <a href="#"><img src="../img/footer/line-hitam.svg" alt="Line"></a>
+                <a href="#"><img src="../img/footer/facebook-hitam.svg" alt="Facebook"></a>
+            </div>
+            <span class="copyright">
+                <p> Copyright by &nbsp;</p><a href="#"> <img src="../img/footer/logo-footer.png" alt="K'lontongan"
+                        class="logo-footer"></a>
+            </span>
         </footer>
     </div>
 </body>

@@ -18,7 +18,7 @@
 /* main */
 main {
     width: 100%;
-    padding: 120px 70px;
+    padding: 70px 5px;
     background-color: #f0f4f7;
 }
 
@@ -31,123 +31,158 @@ main .template-of-card {
 }
 
 .card {
-    margin: 20px 30px 20px 0;
-    width: 210px;
-    height: 280px;
+    margin: 13px 10px 30px;
+    width: 135px;
+    height: 190px;
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
-    padding: 15px;
 
     position: relative;
 }
 
-.card span.qategory {
+.image-products {
+    width: 100%;
+    height: 96px;
+}
+
+.image-products span.category {
     display: block;
     position: absolute;
-    top: 20px;
+    top: 15px;
     left: 0;
-    width: 80px;
-    height: 20px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    width: 57px;
+    height: 16px;
+    padding: 2px 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
     background-color: #007580;
     color: #fec429;
-    font-size: 1em;
+    font-size: 0.65em;
     text-align: center;
     z-index: 1;
 }
 
-.card img.products-picture {
-    position: relative;
+.image-products img {
     width: 100%;
-    height: 150px;
+    height: 96px;
     object-fit: cover;
 }
 
-.card h4.products-name {
-    font-weight: 600;
-    font-size: 1.125em;
-    margin: 10px 0 5px 0;
+.description-products {
+    padding: 10px;
 }
 
-.card p.products-price {
-    font-weight: 500;
-    font-size: 1em;
+.description-products h4.products-name {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.description-products p.products-price {
+    font-weight: 400;
+    font-size: 16px;
     color: #fec429;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
-.card a.btn-pesan {
+.description-products a.btn-pesan {
     display: block;
     background-color: #fec429;
-    padding: 8px 70px;
-    font-size: 1em;
+    padding: 6px 41px;
+    font-size: 12px;
     text-decoration: none;
     color: white;
     border-radius: 5px;
 }
 
-.card a.btn-pesan:hover {
+.description-products a.btn-pesan:hover {
     background-color: #f5be29;
 }
 
-/* akhir dari main */
-
 /* Responsive design */
-/* for desktop */
-@media screen and (min-width: 1320px) and (max-width: 1700px) {
-    .container {
-        grid-template-rows: 100px auto 200px;
-    }
-
-    /* main */
-    main {
-        padding: 30px 103px;
-    }
-
-    .inside-kategori {
-        padding-top: 35px;
-    }
-
-    /* menu-utama */
-    .inside-menu-utama section {
-        margin-top: 46px;
-    }
-
-    .box {
-        width: 200px;
-        height: 258px;
-    }
-
-    .box .name-products,
-    .price-products {
-        padding-left: 15px;
-    }
-
-    .box .name-products {
-        padding-top: 3px;
-    }
-
-    .box .price-products {
-        padding-top: 2px;
-        padding-bottom: 7px;
-    }
-
-    /* akhir dari menu-utama */
-    /* akhir dari main */
-}
-
-@media screen and (min-width: 1000px) and (max-width: 1319px) {
-}
-
 /* for tablet */
-@media screen and (min-width: 661px) and (max-width: 990px) {
-    .container {
-        grid-template-rows: 80px auto 200px;
+@media screen and (min-width: 768px) {
+    main {
+        padding: 100px 10px;
+    }
+
+    .card {
+        margin: 15px 10px 35px;
+        width: 165px;
+        height: 210px;
+    }
+
+    .image-products {
+        height: 105px;
+    }
+
+    .image-products span.category {
+        width: 65px;
+        height: 16px;
+    }
+
+    .image-products img {
+        height: 105px;
+    }
+
+    .description-products {
+        padding: 15px 15px 10px;
+    }
+
+    .description-products p.products-price {
+        margin: 0 0 12px;
+    }
+
+    .description-products a.btn-pesan {
+        padding: 7px 51px;
     }
 }
 
-/* for mobile */
-@media screen and (min-width: 450px) and (max-width: 660px) {
+@media screen and (min-width: 1366px) {
+    main {
+        padding: 120px 50px;
+    }
+
+    .card {
+        margin: 15px 25px 35px;
+        width: 210px;
+        height: 280px;
+    }
+
+    .image-products {
+        height: 150px;
+    }
+
+    .image-products span.category {
+        top: 20px;
+        width: 65px;
+        height: 20px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 3px 12px;
+        font-size: 12px;
+    }
+
+    .image-products img {
+        height: 150px;
+    }
+
+    .description-products {
+        padding: 15px 15px 10px;
+    }
+
+    .description-products h4.products-name {
+        font-size: 17px;
+    }
+
+    .description-products p.products-price {
+        margin: 3px 0 12px;
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    .description-products a.btn-pesan {
+        padding: 8px 70.5px;
+        font-size: 14px;
+    }
 }
