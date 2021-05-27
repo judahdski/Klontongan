@@ -1,66 +1,107 @@
 header {
     width: 100%;
     height: 80px;
-    z-index: 3;
-}
-
-.header-page {
-    margin: auto;
-    height: 80px;
-    max-width: 800px;
+    padding: 0 40px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+
+    background-color: #007580;
 }
 
-.nav-link {
+header img.logo-header {
+    width: 110px;
+    cursor: pointer;
+}
+
+nav {
     display: none;
 }
 
-.shopping-cart {
-    width: 20px;
+.nav-mobile {
+    width: 25px;
 }
 
-@media screen and (min-width: 1170px) {
-    header {
-        height: 100px;
-    }
+.hamburger {
+    width: 26px;
+    cursor: pointer;
+}
 
-    .header-page {
-        height: 100px;
-        justify-content: space-between;
-    }
+.hamburger span.line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: white;
+}
 
-    .nav-link {
-        width: 370px !important;
-    }
-
-    .shopping-cart {
-        width: 25px;
-    }
+.nav-mobile ul.nav-link-mobile {
+    display: none;
 }
 
 @media screen and (min-width: 768px) {
+    header {
+        height: 100px;
+        padding: 0 70px;
+        background-color: black;
+    }
+
+    header img.logo-header {
+        width: 140px;
+    }
+
+    header nav {
+        width: 45%;
+    }
+
     .nav-link {
-        width: 300px;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
 
-    .nav-link a {
+    nav a.nav-items {
         text-decoration: none;
-        color: #fff;
         font-weight: 300;
-        font-size: 0.9em;
-        transition: all 0.4ms ease;
+        font-size: 14px;
+        color: white;
     }
 
-    .nav-link a:hover {
-        transform: scale(1.02);
+    nav a.profile-user {
+        display: block;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: white;
     }
 
-    .nav-link a:active {
-        transform: scale(0.98);
+    nav img.picture-user {
+        width: 35px;
+        height: 35px;
+        object-fit: cover;
+    }
+
+    .nav-mobile {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    header {
+        padding: 0 145px;
+    }
+
+    header img.logo-header {
+        width: 200px;
+    }
+
+    header nav {
+        width: 40%;
+    }
+
+    .nav-link a.nav-items {
+        font-size: 18px;
     }
 }
