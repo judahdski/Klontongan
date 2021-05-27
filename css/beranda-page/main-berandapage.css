@@ -198,6 +198,37 @@ main section.comments {
     color: white;
 }
 
+section.comments h2.title-comments {
+    font-size: 18px;
+    text-align: center;
+}
+
+section.comments .card-comment {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 55px 0;
+}
+
+section.comments img.picture-user {
+    order: 1;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+section.comments p.comment-user {
+    order: 2;
+    font-size: 16px;
+    line-height: 22px;
+}
+
 main section.to-login {
     padding: 50px 28px;
 
@@ -205,4 +236,139 @@ main section.to-login {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+}
+
+span.black-mask {
+    display: block;
+    position: absolute;
+    top: 50px;
+    bottom: 50px;
+    left: 28px;
+    right: 28px;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    z-index: 1;
+}
+h3.title-to-login,
+p.caption-to-login,
+a.btn-to-login {
+    position: relative;
+    z-index: 2;
+}
+
+h3.title-to-login {
+    font-size: 24px;
+    color: white;
+
+    margin: 71px 0 15px;
+}
+
+p.caption-to-login {
+    font-weight: 400;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+
+    margin: 0 0 30px;
+}
+
+a.btn-to-login {
+    display: block;
+    padding: 5px 15px;
+    width: 72px;
+    border-radius: 5px;
+    background-color: #fec429;
+
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+
+    margin: 0 0 76px;
+}
+
+a.btn-to-login:active {
+    background-color: #eeb825;
+}
+
+@media screen and (min-width: 768px) {
+    main section.hero-content {
+        height: 500px;
+        padding: 100px 87px 60px;
+
+        background-image: url(../../img/beranda-page/hero-section-tablet.jpg);
+
+        justify-content: flex-end;
+        align-items: flex-start;
+
+        margin: -100px 0 0;
+    }
+
+    h1.title-hero-content {
+        font-size: 2em;
+        line-height: 36px;
+        text-align: left;
+        margin: 0 0 15px;
+    }
+
+    p.caption-hero-content {
+        margin: 0 0 21px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: left;
+    }
+
+    a.hero-content-btn {
+        margin: 0;
+        font-size: 16px;
+        padding: 6px 15px;
+    }
+
+    main section.aboutus {
+        padding: 80px 50.5px;
+
+        display: grid;
+        grid-template: 'image title' 42.5px 'image text' auto / 1fr 1fr;
+    }
+
+    section.aboutus h2.title-aboutus {
+        grid-area: title;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    section.aboutus img {
+        grid-area: image;
+        width: 95%;
+    }
+
+    img.image-aboutus-mobile {
+        display: none;
+    }
+
+    img.image-aboutus-tablet {
+        display: inline;
+    }
+
+    section.aboutus p.text-aboutus {
+        grid-area: text;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: justify;
+
+        padding: 0 0 0 34px;
+    }
+
+    main section.advantages {
+    }
+    main section.toko {
+    }
+    main section.comments {
+    }
 }
