@@ -10,15 +10,18 @@ header {
 }
 
 header img.logo-header {
+    order: 1;
     width: 110px;
     cursor: pointer;
 }
 
 nav {
+    order: 2;
     display: none;
 }
 
 .nav-mobile {
+    order: 3;
     width: 25px;
 }
 

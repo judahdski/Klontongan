@@ -102,6 +102,9 @@ main section.advantages {
     padding: 70px 75px;
     background-color: #007580;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 section.advantages h2.title-advantages {
@@ -109,7 +112,7 @@ section.advantages h2.title-advantages {
     margin: 0 0 15px;
 }
 
-section.advantages span.card {
+span.card {
     display: block;
     width: 220px;
     height: 260px;
@@ -141,11 +144,9 @@ span.card p.caption-card {
 span.card:nth-child(2) img.image-card {
     width: 71.96px;
 }
-
 span.card:nth-child(3) img.image-card {
     width: 69.88px;
 }
-
 span.card:nth-child(4) img.image-card {
     width: 64.94px;
 }
@@ -198,35 +199,36 @@ main section.comments {
     color: white;
 }
 
-section.comments h2.title-comments {
+h2.title-comments {
     font-size: 18px;
     text-align: center;
 }
 
-section.comments .card-comment {
+.card-comment {
     width: 300px;
-    height: 200px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
 
     margin: 55px 0;
 }
 
-section.comments img.picture-user {
+img.picture-user {
     order: 1;
     width: 65px;
     height: 65px;
-    border-radius: 50%;
+    border-radius: 33px;
     object-fit: cover;
     object-position: center;
+
+    margin: 35px;
 }
 
-section.comments p.comment-user {
+p.comment-user {
     order: 2;
     font-size: 16px;
     line-height: 22px;
+    text-align: center;
 }
 
 main section.to-login {
@@ -337,13 +339,13 @@ a.btn-to-login:active {
         grid-template: 'image title' 42.5px 'image text' auto / 1fr 1fr;
     }
 
-    section.aboutus h2.title-aboutus {
+    h2.title-aboutus {
         grid-area: title;
         font-size: 24px;
         text-align: center;
     }
 
-    section.aboutus img {
+    img {
         grid-area: image;
         width: 95%;
     }
@@ -351,12 +353,11 @@ a.btn-to-login:active {
     img.image-aboutus-mobile {
         display: none;
     }
-
     img.image-aboutus-tablet {
         display: inline;
     }
 
-    section.aboutus p.text-aboutus {
+    p.text-aboutus {
         grid-area: text;
         font-size: 16px;
         line-height: 22px;
@@ -366,9 +367,322 @@ a.btn-to-login:active {
     }
 
     main section.advantages {
+        padding: 100px 80px;
+        display: grid;
+        grid-template: 'topic-adv topic-adv topic-adv' 40px 'card-one card-two card-three' auto / 1fr 1fr 1fr;
     }
+
+    h2.title-advantages {
+        grid-area: topic-adv;
+        font-weight: 500;
+        font-size: 1.5em;
+        color: white;
+    }
+
+    span.card {
+        width: 175px;
+        height: 220px;
+        padding: 20px 10px;
+
+        place-self: center;
+    }
+
+    span.card:nth-child(2) img.image-card {
+        width: 60.5px;
+    }
+    span.card:nth-child(3) img.image-card {
+        width: 60.92px;
+    }
+    span.card:last-child img.image-card {
+        width: 61px;
+    }
+
+    span.card h4.topic-card {
+        font-size: 1.25em;
+    }
+
+    span.card p.caption-card {
+        font-size: 0.75em;
+        line-height: 18px;
+    }
+
     main section.toko {
+        padding: 50px 125px;
     }
+
+    h2.title-toko {
+        font-weight: 400;
+        font-size: 1.5em;
+    }
+
+    p.caption-toko {
+        font-weight: 300;
+        font-size: 1em;
+        margin: 0 0 37px;
+    }
+
+    .group-image {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 48px;
+    }
+
+    .group-image img {
+        width: 200px;
+        object-fit: cover;
+
+        margin: 0;
+    }
+
+    .group-image img.image-toko-mobile {
+        height: 147.06px;
+    }
+    .group-image img.image-toko-tablet {
+        display: inline;
+        height: 132.84px;
+    }
+
     main section.comments {
+        padding: 70px 60px;
+
+        display: grid;
+        grid-template: 'title title' 73px 'card-com card-com' auto / 1fr 1fr;
+    }
+
+    h2.title-comments {
+        grid-area: title;
+        font-size: 20px;
+    }
+
+    .card-comment {
+        height: 215px;
+        margin: 0;
+
+        place-self: center;
+    }
+
+    main section.to-login {
+        padding: 40px 125px;
+    }
+
+    section.to-login .black-mask {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #83663331;
+    }
+
+    section.to-login h3.title-to-login {
+        margin: 0 0 10px;
+        font-size: 1.5em;
+    }
+
+    section.to-login p.caption-to-login {
+        margin: 0 0 53px;
+        font-size: 0.875em;
+    }
+
+    section.to-login a.btn-to-login {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    .container {
+        position: relative;
+    }
+
+    main section.hero-content {
+        padding: 275px 100px 215px 638px;
+        height: 100vh;
+
+        background-image: url(../../img/beranda-page/hero-section-desktop.jpg);
+        background-size: cover;
+        background-position: 0 -120px;
+
+        display: block;
+    }
+
+    h1.title-hero-content {
+        font-weight: 600;
+        font-size: 3em;
+        line-height: 60px;
+        margin: 0 0 16px;
+    }
+
+    p.caption-hero-content {
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 26px;
+        margin: 0 0 41px;
+    }
+
+    a.hero-content-btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    main section.aboutus {
+        padding: 120px 158px;
+
+        grid-template-areas:
+            'title title'
+            'image text';
+        grid-template-rows: 93px auto;
+        place-items: start center;
+    }
+
+    section.aboutus h2.title-aboutus {
+        font-weight: 600;
+        font-size: 2em;
+    }
+
+    section.aboutus img {
+        width: 500px;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    img.image-aboutus-tablet {
+        display: none;
+    }
+    img.image-aboutus-desktop {
+        display: inline;
+    }
+
+    p.text-aboutus {
+        font-size: 20px;
+        line-height: 32px;
+        padding: 0 0 0 100px;
+    }
+
+    main section.advantages {
+        padding: 200px 278px;
+    }
+
+    section.advantages h2.title-advantages {
+        font-size: 2em;
+    }
+
+    section.advantages span.card {
+        width: 220px;
+        height: 260px;
+        padding: 25px 15px;
+
+        margin: 63px 0 20px;
+    }
+
+    span.card:nth-child(2) img.image-card {
+        width: 71.96px;
+    }
+    span.card:nth-child(3) img.image-card {
+        width: 69.88px;
+    }
+    span.card:last-child img.image-card {
+        width: 64.94px;
+    }
+
+    main section.toko {
+        padding: 115px 225px;
+    }
+
+    h2.title-toko {
+        font-size: 2em;
+    }
+
+    p.caption-toko {
+        font-size: 1.125em;
+        margin: 0 0 102.8px;
+    }
+
+    .group-image {
+        margin: 0 0 117px;
+    }
+
+    .group-image img {
+        width: 250px;
+    }
+
+    .group-image img.image-toko-mobile {
+        order: 3;
+        height: 183.82px;
+    }
+    .group-image img.image-toko-tablet {
+        order: 1;
+        height: 166.05px;
+    }
+    .group-image img.image-toko-desktop {
+        order: 2;
+        display: inline;
+        height: 203.58px;
+    }
+
+    a.toko-btn {
+        padding: 15px 25px;
+        font-size: 1.25em;
+    }
+
+    main section.comments {
+        padding: 130px 210px 241px;
+        background-color: #007580;
+    }
+
+    section.comments h2.title-comments {
+        font-size: 2em;
+    }
+
+    section.comments .card-comment {
+        width: 400px;
+        margin: 100px 0;
+    }
+
+    .card-comment img.picture-user {
+        width: 80px;
+        height: 80px;
+        border-radius: 40px;
+        margin: 50px;
+    }
+
+    .card-comment p.comment-user {
+        font-size: 1.25em;
+    }
+
+    main section.to-login {
+        position: absolute;
+        bottom: 210px;
+        left: calc(50% - 450px);
+
+        width: 900px;
+        height: 300px;
+        border-radius: 40px;
+        border: 10px solid #fec429;
+        overflow: hidden;
+
+        background-image: url(../../img/beranda-page/to-login-desktop.jpg);
+        background-size: cover;
+        background-position: 0 -40px;
+
+        padding: 67px 150px;
+    }
+
+    section.to-login .black-mask {
+        background-color: #00262a3a;
+    }
+
+    section.to-login h3.title-to-login {
+        font-size: 2em;
+        margin: 0 0 10px;
+    }
+
+    section.to-login p.caption-to-login {
+        font-size: 1em;
+        margin: 0 0 48px;
+    }
+
+    section.to-login a.btn-to-login {
+        padding: 10px 22px;
+        width: 92px;
+        font-size: 1em;
     }
 }
