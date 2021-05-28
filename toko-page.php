@@ -28,9 +28,9 @@ if (isset($_POST["submit"])) {
         <header>
             <img src="img/header/logo-header.png" alt="K'lontongan" class="logo-header">
             <nav class="nav-link">
-                <a href="#" class="nav-items">Beranda</a>
-                <a href="#" class="nav-items">Toko</a>
-                <a href="#" class="nav-items">Tentang kami</a>
+                <a href="beranda-page.html" class="nav-items">Beranda</a>
+                <a href="toko-page.html" class="nav-items">Toko</a>
+                <a href="about-us-page.html" class="nav-items">Tentang kami</a>
                 <a href="#" class="profile-user"><img src=".." alt="" class="picture-user"></a>
             </nav>
             <div class="nav-mobile">
@@ -39,10 +39,10 @@ if (isset($_POST["submit"])) {
                     <span class="line"></span>
                     <span class="line"></span>
                 </div>
-                <ul class="nav-link-mobile">
-                    <li class="nav-items-mobile" href="#">Beranda</li>
-                    <li class="nav-items-mobile" href="#">Toko</li>
-                    <li class="nav-items-mobile" href="#">Tentang kami</li>
+                <ul class="nav-link-mobile" id="">
+                    <li class="nav-items-mobile"><a href="beranda-page.html">Beranda</a></li>
+                    <li class="nav-items-mobile"><a href="toko-page.html">Toko</a></li>
+                    <li class="nav-items-mobile"><a href="about-us-page.html">Tentang kami</a></li>
                 </ul>
             </div>
         </header>
@@ -76,6 +76,8 @@ if (isset($_POST["submit"])) {
                         class="logo-footer"></a>
             </span>
         </footer>
+
+        <script src="js/header.js"></script>
     </div>
 </body>
 
