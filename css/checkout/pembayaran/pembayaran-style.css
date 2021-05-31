@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color: rgb(243, 243, 243);
+}
+
+.container {
+    width: 100%;
+    background-color: white;
+
+    display: grid;
+    grid-template: 'nav' 80px 'content' 1fr 'aside' auto / 1fr;
+
+    position: relative;
+}
+
+nav {
+    height: 80px;
+    background-color: #fec429;
+    display: flex;
+}
+
+nav a.back-btn {
+    display: block;
+    padding: 28px 30px;
+}
+
+nav a img.back {
+    width: 25px;
+}
+
+nav h2.title-page {
+    font-weight: 500;
+    font-size: 20px;
+    align-self: center;
+}
+
+.container main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main .main-content {
+    padding: 25px 12.5px;
+}
+
+.main-content h3.sub-title {
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0 0 15px;
+}
+
+h3.sub-title:nth-child(3) {
+    margin: 40px 0 15px;
+}
+
+.main-content .box-option {
+    width: 100%;
+    height: 70px;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+    padding: 0 7.5px;
+
+    display: flex;
+    align-items: center;
+}
+
+.box-option a {
+    text-decoration: none;
+    color: #7b7b7b;
+    padding: 25px 50px 25px 0;
+}
+
+.main-content .box-option-brand {
+    width: 100%;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.2);
+    padding: 20px 15px;
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.box-option-brand a img {
+    width: 80px;
+    height: 30px;
+    object-fit: cover;
+}
+
+.box-option-brand p {
+    display: none;
+}
+
+.box-option-brand:hover a img {
+    filter: grayscale(1);
+}
+
+.box-option-brand:hover p.not-available {
+    display: block;
+    padding: 0 20px;
+    font-size: 12px;
+    color: rgb(82, 82, 82);
+}
+
+aside {
+    width: 100%;
+    background-color: white;
+    padding: 20px 13px;
+    box-shadow: 0 -1px 10px #cfcfcf6e;
+}
+
+h4.title-aside {
+    margin: 0 13px 5px;
+    color: #292929;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+p.total-price,
+.admin-fee,
+.insurance {
+    margin: 10px 13px;
+    color: #787878;
+
+    display: flex;
+    justify-content: space-between;
+}
+p.total-price::before {
+    content: 'Total Tagihan';
+}
+p.admin-fee::before {
+    content: 'Biaya admin';
+}
+p.insurance::before {
+    content: 'Asuransi pengiriman';
+}
+
+hr.divider-aside {
+    margin: 15px 0 10px;
+    color: #cdcdcd;
+}
+
+h4.total {
+    margin: 20px 15px 23px;
+    font-size: 18px;
+    color: #fa591d;
+
+    display: flex;
+    justify-content: space-between;
+}
+h4.total::before {
+    content: 'Total harga';
+    color: #292929;
+}
+
+p.confirming-insurance {
+    font-size: 10px;
+    line-height: 11px;
+    color: #787878;
+    margin: 0 0 5px;
+}
+
+aside a.btn-payment {
+    display: block;
+    padding: 8px 166px;
+    background-color: #fec429;
+    border-radius: 5px;
+
+    text-decoration: none;
+    color: white;
+}
+
+a.btn-payment:hover {
+    background-color: #eeb927;
+}
+
+p.alerting-to-choose {
+    margin: 5px 0 0;
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.non-active {
+    display: none;
+}
+
+.notification {
+    display: flex;
+    margin: 17px 0 0;
+}
+
+.notification img {
+    width: 27.21px;
+    margin: 0 15px 0 0;
+    align-self: center;
+}
+
+.notification .text {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.notification .text p:last-child {
+    font-weight: lighter;
+    font-size: 11px;
+    color: #787878;
+}
+
+@media screen and (min-width: 768px) {
+    nav a.back-btn {
+        padding: 28px 35px;
+    }
+
+    main {
+        padding: 40px 85px;
+    }
+
+    aside {
+        display: grid;
+    }
+
+    .box-confirmation {
+        margin: auto;
+        width: 375px;
+        background-color: white;
+        padding: 20px 5px;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    .container {
+        margin: auto;
+        max-width: 768px;
+
+        box-shadow: 1px 2px 10px rgba(204, 204, 204, 0.425);
+    }
+
+    aside {
+        width: 768px;
+        padding: 0;
+    }
+
+    .box-confirmation {
+        padding: 10px 5px;
+    }
+}

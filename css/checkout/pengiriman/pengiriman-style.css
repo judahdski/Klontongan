@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color: rgb(243, 243, 243);
+}
+
+.container {
+    width: 100%;
+    background-color: white;
+
+    display: grid;
+    grid-template: 'nav' 80px 'content' 1fr 'aside' 1fr / 1fr;
+
+    position: relative;
+}
+
+nav {
+    height: 80px;
+    background-color: #fec429;
+    display: flex;
+}
+
+nav a.back-btn {
+    display: block;
+    padding: 28px 30px;
+}
+
+nav a img.back {
+    width: 25px;
+}
+
+nav h2.title-page {
+    font-weight: 500;
+    font-size: 20px;
+    align-self: center;
+}
+
+main {
+    width: 100%;
+    padding: 20px 15px;
+}
+
+.box-of-address {
+    margin: 15px 0 22px;
+    padding: 10px 0;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.box-of-address:hover,
+.box-of-address:active {
+    background-color: #f5f5f5;
+}
+
+p.user-address {
+    color: #787878;
+}
+
+a.new-address {
+    padding: 7px 15px;
+    border: 1px solid #707070;
+    border-radius: 5px;
+
+    text-decoration: none;
+    color: #707070;
+}
+
+hr.divider {
+    margin: 27px 0 25px;
+    height: 2px;
+    background-color: #e1e1e1;
+    border: none;
+}
+
+h3.title-main:nth-child(5) {
+    margin: 0 0 22px;
+}
+
+a.select-courier {
+    padding: 7px 20px;
+    border-radius: 5px;
+    background-color: #fec429;
+
+    text-decoration: none;
+    color: white;
+}
+
+a.select-courier:hover {
+    background-color: #f0ba26;
+}
+
+aside {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+
+    width: 100%;
+    background-color: white;
+    padding: 20px 13px;
+    box-shadow: 0 -1px 10px #cfcfcf6e;
+}
+
+h4.title-aside {
+    margin: 0 13px 5px;
+    color: #292929;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+p.total-price,
+.ongkir-price,
+.insurance {
+    margin: 10px 13px;
+    color: #787878;
+
+    display: flex;
+    justify-content: space-between;
+}
+p.total-price::before {
+    content: 'Total Harga';
+}
+p.ongkir-price::before {
+    content: 'Total ongkos kirim';
+}
+p.insurance::before {
+    content: 'Asuransi pengiriman';
+}
+
+hr.divider-aside {
+    margin: 15px 0 10px;
+    color: #cdcdcd;
+}
+
+h4.total {
+    margin: 0 15px 23px;
+    font-size: 18px;
+    color: #fa591d;
+
+    display: flex;
+    justify-content: space-between;
+}
+h4.total::before {
+    content: 'Total harga';
+    color: #292929;
+}
+
+p.confirming-insurance {
+    font-size: 10px;
+    line-height: 11px;
+    color: #787878;
+    margin: 0 0 5px;
+}
+
+aside a.btn-buy {
+    display: block;
+    padding: 8px 166px;
+    background-color: #fec429;
+    border-radius: 5px;
+
+    text-decoration: none;
+    color: white;
+}
+
+a.btn-buy:hover {
+    background-color: #eeb927;
+}
+
+p.alerting-to-choose {
+    display: none;
+    margin: 5px 0 0;
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.active {
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+    nav a.back-btn {
+        padding: 28px 35px;
+    }
+
+    main {
+        padding: 40px 85px;
+    }
+
+    aside {
+        display: grid;
+    }
+
+    .box-confirmation {
+        margin: auto;
+        width: 375px;
+        background-color: white;
+        padding: 20px 5px;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    .container {
+        margin: auto;
+        max-width: 768px;
+
+        box-shadow: 1px 2px 10px rgba(204, 204, 204, 0.425);
+    }
+
+    aside {
+        width: 768px;
+        padding: 0;
+    }
+
+    .box-confirmation {
+        padding: 10px 5px;
+    }
+}

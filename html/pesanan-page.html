@@ -12,88 +12,47 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <!-- My Style -->
-    <link rel="stylesheet" href="css/checkout/pesanan/header-pesananpage.css">
-    <link rel="stylesheet" href="css/checkout/pesanan/footer-pesananpage.css">
-    <link rel="stylesheet" href="css/checkout/pesanan/main-pesananpage.css">
+    <link rel="stylesheet" href="../css/checkout/pesanan/pesanan-style.css">
 
     <title>Checkout | Pesanan</title>
 </head>
 
 <body>
     <div class="container">
-        <header>
-            <section class="header-page">
-                <div class="header-logo">
-                    <a href="#"><img src="img/header/logo-header.png" alt="K'lontongan"></a>
-                </div>
-                <nav class="nav-link">
-                    <a href="#">Beranda</a>
-                    <a href="#">Toko</a>
-                    <a href="#">Tentang Kami</a>
-                    <a href="#"><img src="img/header/shopping-cart-hitam.svg" alt="Shopping Cart" width="20px"></a>
-                </nav>
-            </section>
-        </header>
+        <nav>
+            <a href="#" class="back-btn"><img src="../img/checkout-page/left-arrow.svg" alt="Back to homepage"
+                    class="back"></a>
+            <h2 class="title-page">Pesanan</h2>
+        </nav>
         <main>
-            <div class="inside-main">
-                <div class="side-main">
-                    <nav class="nav-dsktp">
-                        <ul class="breadcrumb">
-                            <li><a href="#" class="nav-dsktp-btn active">Pesanan</a></li>
-                            <li><a href="#" class="nav-dsktp-btn">Pengiriman</a></li>
-                            <li><a href="#" class="nav-dsktp-btn">Pembayaran</a></li>
-                            <li><a href="#" class="nav-dsktp-btn">Selesai</a></li>
-                        </ul>
-                    </nav>
-                    <nav class="nav-mbl">
-                        <a href="#"><img src="../img/main/side-main/left-arrow.png" alt="Kembali" width="25px"></a>
-                        <p>Pesanan</p>
-                    </nav>
-                </div>
-                <div class="product">
-                    <div class="selected-all">
-                        <label for="box-1" class="box-confirm">
-                            <input type="checkbox" name="selected-all" id="box-1" checked="tekan">
-                            <span class="checked"></span>
-                        </label>
-                        <p>Pilih Semua</p>
+            <div class="selected-all">
+                <input type="checkbox" name="selected-all" id="selcted-all">
+                <p class="text-seledted-all">Pilih Semua</p>
+            </div>
+            <hr class="divider-content">
+            <div class="products">
+                <input type="checkbox" name="first-product" id="first-product">
+                <span class="box-products">
+                    <img src="..." alt="..." class="product-image">
+                    <div class="product-desc">
+                        <p class="product-name">Bawang Merah</p>
+                        <p class="amount-of-product">Jumlah &nbsp;&nbsp;:&nbsp; 2kg</p>
+                        <p class="product-price">Harga &nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp; <span
+                                class="prdct-price">Rp0</span>
+                        </p>
                     </div>
-                    <hr width="90%"
-                        style="margin: auto; height: 5px; border-width: 0; color: black; background-color: #dddddd;">
-                    <div class="group-of-products">
-                        <h2>Keranjangnya kosong harap diisi!</h2>
-                    </div>
-                </div>
-                <div class="box-confirmation">
-                    <div class="title">
-                        <h4>Pesanan</h4>
-                    </div>
-                    <div class="total-harga">
-                        <p>Harga (0 barang)</p>
-                        <p>Rp 0.-</p>
-                    </div>
-                    <div class="total-harga-final">
-                        <p>Total Harga</p>
-                        <p>Rp 0.-</p>
-                    </div>
-                    <span class="btn-pesan"><a href="#">Beli</a></span>
-                </div>
+                </span>
             </div>
         </main>
-        <footer>
-            <section class="footer-page">
-                <div class="group-of-logo">
-                    <a href="#"><img src="img/footer/instagram-hitam.svg" alt="Instagram" width="25px"></a>
-                    <a href="#"><img src="img/footer/line-hitam.svg" alt="Line" width="25px"></a>
-                    <a href="#"><img src="img/footer/facebook-hitam.svg" alt="Facebook" width="25px"></a>
-                </div>
-                <div class="group-copyright">
-                    <p>Copyright by</p>
-                    <img src="img/footer/logo-footer.png" alt="K'lontongan">
-                </div>
-            </section>
-        </footer>
-        <script src="pesanan-script.js"></script>
+        <aside>
+            <div class="box-confirmation">
+                <p class="price-product">Rp0</p>
+                <p class="amount-product">0</p>
+                <hr class="divider-aside">
+                <h4 class="total">Rp.0</h4>
+                <a href="#" class="btn-buy">Beli</a>
+            </div>
+        </aside>
     </div>
 </body>
 
