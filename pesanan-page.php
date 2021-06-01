@@ -82,6 +82,9 @@ if (isset($_POST["submit"])) {
 
             <!-- dan yang ini buat tombol beli yang ada di paling bawahhh -->
             <a href="#" class="btn-buy">Beli</a>
+
+
+            <!-- dan sini terakhir -->
         </aside>
     </div>
 </body>
