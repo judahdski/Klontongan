@@ -56,7 +56,7 @@ function register($infologin){
 			echo "password salah";
 		}
 	} else {
-		print "<p style=\" font-weight: bold; color: rgb(255, 49, 49); text-align: center;\"> Email / Password salah !</p>";
+		print "<p style=\" font-weight: bold; color: rgb(255, 49, 49); text-align: center;\"> Email / password yang anda masukan salah !</p>";
 	}
 }
 ?>

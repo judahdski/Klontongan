@@ -12,10 +12,8 @@ body {
 
 .container {
     width: 100%;
+    height: 100vh;
     background-color: white;
-
-    display: grid;
-    grid-template: 'nav' 80px 'content' 1fr 'aside' 1fr / 1fr;
 
     position: relative;
 }
@@ -51,11 +49,12 @@ main {
     padding: 10px 0;
     border-top: 1px solid #dbdbdb;
     border-bottom: 1px solid #dbdbdb;
+    cursor: default;
 }
 
 .box-of-address:hover,
 .box-of-address:active {
-    background-color: #f5f5f5;
+    background-color: rgb(245, 245, 245);
 }
 
 p.user-address {
@@ -71,28 +70,80 @@ a.new-address {
     color: #707070;
 }
 
-hr.divider {
-    margin: 27px 0 25px;
-    height: 2px;
-    background-color: #e1e1e1;
-    border: none;
+a.new-address:hover,
+a.new-address:active {
+    background-color: rgb(245, 245, 245);
 }
 
-h3.title-main:nth-child(5) {
-    margin: 0 0 22px;
+h3.title-main:nth-child(4) {
+    margin: 32px 0 15px;
 }
 
-a.select-courier {
-    padding: 7px 20px;
-    border-radius: 5px;
-    background-color: #fec429;
-
-    text-decoration: none;
-    color: white;
+.group-box-option {
+    display: flex;
+    flex-direction: column;
 }
 
-a.select-courier:hover {
-    background-color: #f0ba26;
+.box-option {
+    width: 345px;
+    height: 61px;
+    padding: 0 15px;
+
+    border-bottom: 1px solid #dbdbdb;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.box-option:first-child {
+    border-top: 1px solid #dbdbdb;
+}
+
+p.option-one,
+p.estimate-price,
+p.alerting-feature {
+    color: #616161;
+}
+
+img.brand {
+    width: 80px;
+}
+
+p.option-one {
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+p.alerting-feature {
+    display: none;
+}
+
+.box-option:nth-child(2):hover,
+.box-option:nth-child(2):active img.brand {
+    filter: grayscale(1);
+}
+.box-option:last-child:hover,
+.box-option:last-child:active img.brand {
+    filter: grayscale(1);
+}
+.box-option:nth-child(2):hover p.alerting-feature {
+    display: block;
+    font-size: 0.875em;
+}
+.box-option:nth-child(2):active p.alerting-feature {
+    display: block;
+    font-size: 0.875em;
+}
+.box-option:last-child:hover p.alerting-feature {
+    display: block;
+    font-size: 0.875em;
+}
+.box-option:last-child:active p.alerting-feature {
+    display: block;
+    font-size: 0.875em;
 }
 
 aside {
@@ -102,65 +153,15 @@ aside {
 
     width: 100%;
     background-color: white;
-    padding: 20px 13px;
-    box-shadow: 0 -1px 10px #cfcfcf6e;
-}
+    padding: 10px 12.5px;
 
-h4.title-aside {
-    margin: 0 13px 5px;
-    color: #292929;
-
-    display: flex;
-    justify-content: space-between;
-}
-
-p.total-price,
-.ongkir-price,
-.insurance {
-    margin: 10px 13px;
-    color: #787878;
-
-    display: flex;
-    justify-content: space-between;
-}
-p.total-price::before {
-    content: 'Total Harga';
-}
-p.ongkir-price::before {
-    content: 'Total ongkos kirim';
-}
-p.insurance::before {
-    content: 'Asuransi pengiriman';
-}
-
-hr.divider-aside {
-    margin: 15px 0 10px;
-    color: #cdcdcd;
-}
-
-h4.total {
-    margin: 0 15px 23px;
-    font-size: 18px;
-    color: #fa591d;
-
-    display: flex;
-    justify-content: space-between;
-}
-h4.total::before {
-    content: 'Total harga';
-    color: #292929;
-}
-
-p.confirming-insurance {
-    font-size: 10px;
-    line-height: 11px;
-    color: #787878;
-    margin: 0 0 5px;
+    display: grid;
 }
 
 aside a.btn-buy {
+    margin: auto;
     display: block;
-    padding: 8px 166px;
+    padding: 10px 156px;
     background-color: #fec429;
     border-radius: 5px;
 
