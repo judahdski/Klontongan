@@ -14,9 +14,6 @@ body {
     width: 100%;
     background-color: white;
 
-    display: grid;
-    grid-template: 'nav' 80px 'content' 1fr 'aside' auto / 1fr;
-
     position: relative;
 }
 
@@ -112,8 +109,7 @@ h3.sub-title:nth-child(3) {
 aside {
     width: 100%;
     background-color: white;
-    padding: 20px 13px;
-    box-shadow: 0 -1px 10px #cfcfcf6e;
+    padding: 20px 23px;
 }
 
 h4.title-aside {
@@ -137,15 +133,11 @@ p.total-price::before {
     content: 'Total Tagihan';
 }
 p.admin-fee::before {
-    content: 'Biaya admin';
-}
-p.insurance::before {
-    content: 'Asuransi pengiriman';
+    content: 'Ongkos Kirim';
 }
 
 hr.divider-aside {
     margin: 15px 0 10px;
-    color: #cdcdcd;
 }
 
 h4.total {
@@ -170,27 +162,17 @@ p.confirming-insurance {
 
 aside a.btn-payment {
     display: block;
-    padding: 8px 166px;
+    width: 329px;
+    margin: auto;
+    padding: 15px 144px;
     background-color: #fec429;
-    border-radius: 5px;
+    border-radius: 10px;
 
     text-decoration: none;
     color: white;
 }
-
 a.btn-payment:hover {
     background-color: #eeb927;
-}
-
-p.alerting-to-choose {
-    margin: 5px 0 0;
-    text-align: center;
-    font-weight: 400;
-    font-size: 14px;
-}
-
-.non-active {
-    display: none;
 }
 
 .notification {
