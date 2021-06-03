@@ -49,7 +49,7 @@ if (isset($_POST["submit"])) {
 
 <body>
     <div class="container">
-        <header style="background-color: #fec429;">
+        <header>
             <img src="../img/header/logo-header.png" alt="K'lontongan" class="logo-header">
             <nav class="nav-link">
                 <a href="beranda-page.php" class="nav-items">Beranda</a>

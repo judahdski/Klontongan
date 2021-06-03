@@ -1,6 +1,6 @@
 <?php 
-  require 'connect2.php';
-	?>
+    require 'connect2.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,59 +9,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cerita tentang Toko K'lontongan</title>
-    <link rel="stylesheet" href="css/about-us-page/tentangkamipage-style.css">
+    <!-- My Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <!-- My Style -->
+    <link rel="stylesheet" href="css/about-us-page/header-aboutus.css">
+    <link rel="stylesheet" href="css/about-us-page/main-aboutus.css">
+    <link rel="stylesheet" href="css/about-us-page/footer-aboutus.css">
 </head>
 
 <body>
     <div class="container">
         <header>
-            <div class="header-logo">
-                <a href="#"><img src="img/header/logo-header.png" alt="K'lontongan"></a>
-            </div>
-            <nav>
-                <a href="beranda-page.php">Beranda</a>
-                <a href="toko-page.php">Toko</a>
-                <a href="tentangkami.php">Tentang Kami</a>
-                <a href="#"><img src="img/header/shopping-cart-hitam.svg" alt="Shopping Cart"></a>
-                <a href="logout.php">Logout</a>
+            <img src="img/header/logo-header.png" alt="K'lontongan" class="logo-header">
+            <nav class="nav-link">
+                <a href="beranda-page.php" class="nav-items">Beranda</a>
+                <a href="toko-page.php" class="nav-items">Toko</a>
+                <a href="about-us-page.php" class="nav-items">Tentang kami</a>
+                <a href="#" class="profile-user"><img src=".." alt="" class="picture-user"></a>
             </nav>
+            <div class="nav-mobile">
+                <div class="hamburger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+                <ul class="nav-link-mobile">
+                    <li class="nav-items-mobile"><a href="beranda-page.html">Beranda</a></li>
+                    <li class="nav-items-mobile"><a href="toko-page.html">Toko</a></li>
+                    <li class="nav-items-mobile"><a href="about-us-page.html">Tentang Kami</a></li>
+                </ul>
+            </div>
         </header>
         <main>
-            <div class="main-content">
-                <h3>K'lontongan - Pemenuh Kebutuhan Sehari-hari</h3>
-                <p>K'lontongan dikenal dengan nama "Toko Rian". Rian sendiri adalah anak pertama dari pendiri warung ini.
-                Awal mula K'lontongan ini berdiri yaitu tahun 1998. Pada tahun itu, warung Rian masih sangat sederhana sekali. 
-                Hingga pendiri warung ini memenuhi apa yang pembeli butuhkan akhirnya warung bisa sebesar sekarang.</p>
-                <br>
-                <p>Warung Rian ini berada didaerah Tipar Cakung, Jakarta Timur. Setalah lama mengalami jatuh bangun, pada tahun 2020
-                akhirnya membuka cabang ke-2 didaerah Babelan, Kab. Bekasi, Perumahan Wahana Pondok Ungu. Asal mula dibuatnya Website K'lontongan 
-                yaitu karena masa pandemi yang membuat pendapatan warung turun. Alasan dibuat Website ini salah satunya untuk mempermudah semua orang
-                memenuhi kebutuhannya tanpa keluar rumah. </p>
-            </div>
-            <div class="main-image">
-                <img src="img/aboutUs-page/gambar-tentangKami-page.jpg" alt="Sayuran" class="img-desktop">
-                <img src="img/aboutUs-page/gambar-tentangKami-tabletnmobileversion.jpg" alt="Sayuran"
-                    class="img-tabnmobl">
-            </div>
+            <section class="topic">
+                <h3>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate ut rerum accusantium. Veritatis
+                    eum alias rem? Quo, perspiciatis hic voluptate natus voluptatibus in nemo asperiores dicta autem
+                    reiciendis, error vitae tenetur eum eaque incidunt, maiores voluptatum similique perferendis nisi
+                    aliquam consequuntur quis doloremque!
+                </h3>
+            </section>
+            <section class="image">
+                <img src="img/aboutUs-page/gambar-desktop.jpg" alt="Gambar Desktop" class="image-desktop">
+                <img src="img/aboutUs-page/gambar-tablet.jpg" alt="Gambar Tablet" class="image-tablet">
+                <img src="img/aboutUs-page/gambar-mobile.jpg" alt="Gambar Mobile" class="image-mobile">
+            </section>
+            <section class="content">
+                <p class="text-story">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi modi quas cupiditate soluta vel
+                    aperiam et! Facilis dolorem ipsum ratione aspernatur dolor illum pariatur nesciunt fuga enim
+                    assumenda vitae quam fugiat quia ab, praesentium, vel atque rerum. Reiciendis, labore? Id quia nulla
+                    maxime alias quod voluptate, blanditiis fugiat dolor laboriosam omnis temporibus in molestiae ipsa
+                    modi explicabo est cupiditate ullam rem tempora neque accusamus.
+                    <br><br>
+                    Officiis aliquam odio cum illo veritatis! At minus possimus rem est placeat fugiat dolorum tenetur
+                    similique a commodi nemo voluptates dolores quas soluta molestiae ipsam, sint facilis ullam. Natus
+                    explicabo debitis perferendis quaerat tenetur totam esse, maiores sed obcaecati qui repellat facere
+                    neque odio quos
+                    possimus optio voluptatem, eveniet veritatis error ipsam illo. Maiores nisi ab modi fugit amet!
+                    <br><br>
+                    Praesentium dolores fuga atque asperiores hic iusto quo corporis
+                    velit voluptatum voluptate porro, earum ab facilis soluta impedit nisi odit incidunt dignissimos,
+                    iste illum maiores, nostrum eaque nobis quaerat! Illum, nihil, cumque numquam nulla eos ipsa
+                    voluptatum debitis tempora dignissimos optio, deleniti aut
+                    suscipit architecto ullam eaque? Ullam hic suscipit id alias ipsum doloribus, quae sequi cupiditate.
+                </p>
+            </section>
         </main>
         <footer>
-            <div class="inside-footer">
-                <div class="group-icon">
-                    <a href="#"><img src="img/footer/instagram-hitam.svg" alt="Instagram" width="25px"></a>
-                    <a href="#"><img src="img/footer/line-hitam.svg" alt="Line" width="25px"></a>
-                    <a href="#"><img src="img/footer/facebook-hitam.svg" alt="Facebook" width="25px"></a>
-                </div>
-                <div class="group-copyright">
-                    <p>Copyright by </p>
-                    <a href="#"><img src="img/footer/logo-footer.png" alt="K'lontongan"></a>
-                </div>
+            <div class="social-media">
+                <a href="#"><img src="img/footer/instagram-hitam.svg" alt="Instagram"></a>
+                <a href="#"><img src="img/footer/line-hitam.svg" alt="Line"></a>
+                <a href="#"><img src="img/footer/facebook-hitam.svg" alt="Facebook"></a>
             </div>
+            <span class="copyright">
+                <p> Copyright by &nbsp;</p><a href="#"> <img src="img/footer/logo-footer.png" alt="K'lontongan"
+                        class="logo-footer"></a>
+            </span>
         </footer>
     </div>
+
+    <script src="js/header.js"></script>
 </body>
 
 </html>

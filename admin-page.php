@@ -52,7 +52,7 @@
             </a>
 
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li><a class="dropdown-item" href="admintambah-page.php">Tambah Barang dong</a></li>
+                <li><a class="dropdown-item" href="#tambah-barang">Tambah Barang dong</a></li>
                 <li><a class="dropdown-item" href="#lihat-data-pembeli">Lihat Data Pembeli doang kok</a></li>
             </ul>
         </div>
