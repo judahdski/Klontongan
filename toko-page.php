@@ -7,31 +7,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toko K'lontongan</title>
     <!-- Style -->
-    <link rel="stylesheet" href="css/toko-page/header-tokopage.css">
-    <link rel="stylesheet" href="css/toko-page/mainstyle-tokopage.css">
-    <link rel="stylesheet" href="css/toko-page/footer-tokopage.css">
+    <link rel="stylesheet" href="header-tokopage.css">
+    <link rel="stylesheet" href="mainstyle-tokopage.css">
+    <link rel="stylesheet" href="footer-tokopage.css">
 </head>
 
 <?php 
 require 'connect2.php';
 session_start();
+$email=$_SESSION['user'];
 $sql=mysqli_query($conn, "SELECT * FROM barang");
 if (isset($_POST["submit"])) {
-  $sqljenis=mysqli_query($conn, "SELECT nama,harga,deskripsi FROM barang WHERE id_barang='$id_barang' LIMIT 1");
-  $resultjenis=mysqli_fetch_array($sqljenis);
-  $nama=$resultjenis['nama'];
-}
-?>
+    $id_barang=$_POST['id_barang'];
+    $banyak=$_POST['banyak'];
+    $status = "Belum Terbayar";
+    $sqljenis=mysqli_query($conn, "SELECT nama,harga,deskripsi FROM barang WHERE id_barang='$id_barang' LIMIT 1");
+    $resultjenis=mysqli_fetch_array($sqljenis);
+    $nama=$resultjenis['nama'];
+    if($banyak<1){
+        echo "<script>
+          alert('Pesan dengan minimal 1 item');
+          document.location.href='toko-page.php';
+          </script>";
+      
+      }else{
+      $totalharga=($banyak * $resultjenis['harga']);
+      $sqlquery=mysqli_query($conn, "INSERT INTO pemesanan (totalharga, banyak, email, nama, status) VALUES ('$totalharga', '$banyak', '$email', '$nama', '$status') ");
+      }
+      if($sqlquery){
+        echo "<script>
+                alert('Pesanan anda sudah disimpan');
+                document.location.href='pesanan-page.php';
+                </script>";
+      }else{
+        echo mysqli_error($conn);
+      }
+    }
+    ?>
 
 <body>
     <div class="container">
-        <header>
-            <img src="img/header/logo-header.png" alt="K'lontongan" class="logo-header">
+        <header style="background-color: #fec429;">
+            <img src="../img/header/logo-header.png" alt="K'lontongan" class="logo-header">
             <nav class="nav-link">
-                <a href="beranda-page.html" class="nav-items">Beranda</a>
-                <a href="toko-page.html" class="nav-items">Toko</a>
-                <a href="about-us-page.html" class="nav-items">Tentang kami</a>
+                <a href="beranda-page.php" class="nav-items">Beranda</a>
+                <a href="toko-page.php" class="nav-items">Toko</a>
+                <a href="tentangkami.php" class="nav-items">Tentang kami</a>
                 <a href="#" class="profile-user"><img src=".." alt="" class="picture-user"></a>
+                <a href="logout.php">Logout</a>
             </nav>
             <div class="nav-mobile">
                 <div class="hamburger">
@@ -39,45 +62,46 @@ if (isset($_POST["submit"])) {
                     <span class="line"></span>
                     <span class="line"></span>
                 </div>
-                <ul class="nav-link-mobile" id="">
-                    <li class="nav-items-mobile"><a href="beranda-page.html">Beranda</a></li>
-                    <li class="nav-items-mobile"><a href="toko-page.html">Toko</a></li>
-                    <li class="nav-items-mobile"><a href="about-us-page.html">Tentang kami</a></li>
+                <ul class="nav-link-mobile">
+                    <li class="nav-items-mobile" href="#">Beranda</li>
+                    <li class="nav-items-mobile" href="#">Toko</li>
+                    <li class="nav-items-mobile" href="#">Tentang kami</li>
                 </ul>
             </div>
         </header>
         <main>
             <div class="template-of-card">
-                <?php foreach($sql as $row) : ?>
-                                <div class="card">
-                                    <div class="image-products">
-                                        <span class="category"><?= $row['deskripsi']; ?></span>
-                                        <img src="<?= $row['pict']; ?>" class="products-picture">
-                                    </div>
-                                    <div class="description-products">
-                                        <h4 class="products-name"><?= $row['nama']; ?></h4>
-                                        <p class="products-price"><?= $row['harga']; ?></p>
-                                        <input type="hidden" value="<?= $row['id_barang'] ?>" name="id_barang">
-                                        <a href="#" class="btn-pesan">pesan</a>
-                                    </div>
-                                </div>
-                            <br>
-                                <?php endforeach; ?>
+            <?php foreach($sql as $row) : ?>
+                <div class="card">
+                    <div class="image-products">
+                    <span class="qategory"><?= $row['deskripsi']; ?></span>
+                    <img src="<?= $row['pict']; ?>" class="products-picture">
+                    </div>
+                    <div class="description-products">
+                        <form action="" method="POST">
+                        <h4 class="products-name"><?= $row['nama']; ?></h4>
+                        <p class="products-price">Rp<?= $row['harga']; ?></p><input type="number" id="quantity" name="banyak" min="1" max="5" style="border-radius: 15px; background-color: white; padding: 5px; width: 100px; text-align: center;">
+                        <input type="hidden" value="<?= $row['id_barang'] ?>" name="id_barang">
+                        <button type="submit" name="submit">Pesan</button>
+                        <!-- <a href="pesanan-page.php" class="btn-pesan">pesan</a> -->
+                        </form>
+                    </div>
+                </div>
+                <?php endforeach; ?>
             </div>
         </main>
         <footer>
             <div class="social-media">
-                <a href="#"><img src="img/footer/instagram-hitam.svg" alt="Instagram"></a>
-                <a href="#"><img src="img/footer/line-hitam.svg" alt="Line"></a>
-                <a href="#"><img src="img/footer/facebook-hitam.svg" alt="Facebook"></a>
+                    <a href="#"><img src="img/footer/instagram-hitam.svg" alt="Instagram" width="25px"></a>
+                    <a href="#"><img src="img/footer/line-hitam.svg" alt="Line" width="25px"></a>
+                    <a href="#"><img src="img/footer/facebook-hitam.svg" alt="Facebook" width="25px"></a>
+                </div>
+                <span class="copyright">
+                    <p> Copyright by &nbsp;</p><a href="#"> 
+                    <img src="img/footer/logo-footer.png" alt="K'lontongan">
+                </span>
             </div>
-            <span class="copyright">
-                <p> Copyright by &nbsp;</p><a href="#"> <img src="img/footer/logo-footer.png" alt="K'lontongan"
-                        class="logo-footer"></a>
-            </span>
         </footer>
-
-        <script src="js/header.js"></script>
     </div>
 </body>
 
