@@ -6,10 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toko K'lontongan</title>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <!-- Style -->
-    <link rel="stylesheet" href="header-tokopage.css">
-    <link rel="stylesheet" href="mainstyle-tokopage.css">
-    <link rel="stylesheet" href="footer-tokopage.css">
+    <link rel="stylesheet" href="css/toko-page/header-tokopage.css">
+    <link rel="stylesheet" href="css/toko-page/mainstyle-tokopage.css">
+    <link rel="stylesheet" href="css/toko-page/footer-tokopage.css">
 </head>
 
 <?php 
@@ -26,22 +29,21 @@ if (isset($_POST["submit"])) {
     $nama=$resultjenis['nama'];
     if($banyak<1){
         echo "<script>
-          alert('Pesan dengan minimal 1 item');
-          document.location.href='toko-page.php';
-          </script>";
-      
-      }else{
+        alert('Pesan dengan minimal 1 item');
+        document.location.href='toko-page.php';
+        </script>";
+    } else {
       $totalharga=($banyak * $resultjenis['harga']);
-      $sqlquery=mysqli_query($conn, "INSERT INTO pemesanan (totalharga, banyak, email, nama, status) VALUES ('$totalharga', '$banyak', '$email', '$nama', '$status') ");
-      }
-      if($sqlquery){
+        $sqlquery=mysqli_query($conn, "INSERT INTO pemesanan (totalharga, banyak, email, nama, status) VALUES ('$totalharga', '$banyak', '$email', '$nama', '$status') ");
+    }
+    if($sqlquery){
         echo "<script>
                 alert('Pesanan anda sudah disimpan');
                 document.location.href='pesanan-page.php';
                 </script>";
-      }else{
+    }else{
         echo mysqli_error($conn);
-      }
+    }
     }
     ?>
 
@@ -80,10 +82,10 @@ if (isset($_POST["submit"])) {
                     <div class="description-products">
                         <form action="" method="POST">
                         <h4 class="products-name"><?= $row['nama']; ?></h4>
-                        <p class="products-price">Rp<?= $row['harga']; ?></p><input type="number" id="quantity" name="banyak" min="1" max="5" style="border-radius: 15px; background-color: white; padding: 5px; width: 100px; text-align: center;">
+                        <p class="products-price">Rp<?= $row['harga']; ?></p>
+                        <input type="number" id="quantity" name="banyak" min="1" max="5" style="border-radius: 15px; background-color: white; padding: 5px; width: 100px; text-align: center;">
                         <input type="hidden" value="<?= $row['id_barang'] ?>" name="id_barang">
-                        <button type="submit" name="submit">Pesan</button>
-                        <!-- <a href="pesanan-page.php" class="btn-pesan">pesan</a> -->
+                        <button type="submit" name="submit" class="btn-pesan">Pesan</button>
                         </form>
                     </div>
                 </div>
