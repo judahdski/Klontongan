@@ -1,7 +1,7 @@
 <?php 
 
 $conn = mysqli_connect("localhost","root","","webkelontongan");
-session_start(); 
+// session_start(); 
 
 function register($infologin){
 	global $conn;
@@ -38,7 +38,7 @@ function register($infologin){
 	if (mysqli_num_rows($cekuser) === 1) {
 		$hasil = mysqli_fetch_assoc($cekuser);
 		if (password_verify($password,$hasil["password"])) {		
-		
+			$_SESSION["id_pembeli"] = $hasil["id_pembeli"];
 			$_SESSION["user"] = $email;
 			$_SESSION["login"] = true;
 			if ($hasil["status"] == 'admin'){
@@ -56,7 +56,11 @@ function register($infologin){
 			echo "password salah";
 		}
 	} else {
-		print "<p style=\" font-weight: bold; color: rgb(255, 49, 49); text-align: center;\"> Email / password yang anda masukan salah !</p>";
+		print "<p style=\"color:red; font-style: italic;\"> Email / Password salah !</p>";
 	}
 }
-?>
+
+
+
+
+ ?>
