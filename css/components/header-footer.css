@@ -90,6 +90,57 @@ nav {
         object-fit: cover;
     }
 
+    nav .profile {
+        position: relative;
+    }
+
+    #profile-setting-non-active {
+        display: none;
+    }
+
+    .profile-setting {
+        position: absolute;
+        top: 55px;
+        left: -65px;
+        width: 180px;
+        height: 109px;
+        background-color: white;
+        border-radius: 10px;
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 14.5px 0;
+    }
+
+    .profile-setting a:first-child {
+        padding: 10.5px 32.5px;
+        font-size: 14px;
+        text-decoration: none;
+        color: #2c2c2c;
+        text-align: center;
+        border-top: 0.1px solid rgba(0, 0, 0, 0.2);
+        border-bottom: 0.1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .profile-setting a:first-child:hover {
+        background-color: whitesmoke;
+    }
+
+    .profile-setting a:last-child {
+        font-size: 14px;
+        color: #ff4d4d;
+        margin: 10.5px 0 0;
+        text-align: center;
+        transition: all 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    .profile-setting a:last-child:hover {
+        transform: scale(1.02);
+        text-decoration: none;
+        color: #ff4141;
+    }
+
     .nav-mobile {
         display: none;
     }

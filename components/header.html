@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
     <!-- My Style -->
-    <link rel="stylesheet" href="../css/components/header-style.css">
+    <link rel="stylesheet" href="../css/components/header-footer.css">
     <!-- font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -23,7 +23,13 @@
             <a href="#" class="nav-items">Beranda</a>
             <a href="#" class="nav-items">Toko</a>
             <a href="#" class="nav-items">Tentang kami</a>
-            <a href="#" class="profile-user"><img src=".." alt="" class="picture-user"></a>
+            <div class="profile">
+                <a href="#" class="profile-user"><img src=".." alt="" class="picture-user"></a>
+                <div class="profile-setting" id="profile-setting-non-active">
+                    <a href="../html/profile-page.html">Pengaturan Profile</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
         </nav>
         <div class="nav-mobile">
             <div class="hamburger">
@@ -49,6 +55,8 @@
                     class="logo-footer"></a>
         </span>
     </footer>
+
+    <script src="../js/header.js"></script>
 </body>
 
 </html>
