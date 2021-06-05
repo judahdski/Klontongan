@@ -50,13 +50,18 @@ if (isset($_POST["submit"])) {
 <body>
     <div class="container">
         <header>
-            <img src="../img/header/logo-header.png" alt="K'lontongan" class="logo-header">
+            <img src="img/header/logo-header.png" alt="K'lontongan" class="logo-header">
             <nav class="nav-link">
                 <a href="beranda-page.php" class="nav-items">Beranda</a>
                 <a href="toko-page.php" class="nav-items">Toko</a>
-                <a href="tentangkami.php" class="nav-items">Tentang kami</a>
-                <a href="#" class="profile-user"><img src=".." alt="" class="picture-user"></a>
-                <a href="logout.php">Logout</a>
+                <a href="about-us-page.php" class="nav-items">Tentang kami</a>
+                <div class="profile">
+                    <img src="img/header/account.png" alt="user" class="picture-user">
+                    <div class="profile-desktop" id="profile-dropdown">
+                        <a href="html/profile-page.html">Pengaturan Profile</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </div>
             </nav>
             <div class="nav-mobile">
                 <div class="hamburger">
@@ -64,10 +69,12 @@ if (isset($_POST["submit"])) {
                     <span class="line"></span>
                     <span class="line"></span>
                 </div>
-                <ul class="nav-link-mobile">
-                    <li class="nav-items-mobile" href="#">Beranda</li>
-                    <li class="nav-items-mobile" href="#">Toko</li>
-                    <li class="nav-items-mobile" href="#">Tentang kami</li>
+                <ul class="nav-link-mobile" id="nav-mobile-non-active">
+                    <li class="nav-items-mobile"><a href="beranda-page.php">Beranda</a></li>
+                    <li class="nav-items-mobile"><a href="toko-page.php">Toko</a></li>
+                    <li class="nav-items-mobile"><a href="about-us-page.php">Tentang kami</a></li>
+                    <li class="nav-items-mobile"><a href="html/profile-page.html">Pengaturan Akun</a></li>
+                    <li class="nav-items-mobile"><a href="logout.php" class="logout-btn">Logout</a></li>
                 </ul>
             </div>
         </header>
@@ -105,6 +112,8 @@ if (isset($_POST["submit"])) {
             </div>
         </footer>
     </div>
+
+    <script src="js/header.js"></script>
 </body>
 
 </html>

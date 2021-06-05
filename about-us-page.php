@@ -1,6 +1,8 @@
 <?php 
     require 'connect2.php';
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Cerita tentang Toko K'lontongan</title>
     <!-- My Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -29,8 +32,8 @@
                 <a href="toko-page.php" class="nav-items">Toko</a>
                 <a href="about-us-page.php" class="nav-items">Tentang kami</a>
                 <div class="profile">
-                    <a href="#" class="profile-user"><img src=".." alt="" class="picture-user"></a>
-                    <div class="profile-setting" id="profile-setting-non-active">
+                    <img src="img/header/account.png" alt="user" class="picture-user">
+                    <div class="profile-desktop" id="profile-dropdown">
                         <a href="../html/profile-page.html">Pengaturan Profile</a>
                         <a href="#">Logout</a>
                     </div>
@@ -42,10 +45,12 @@
                     <span class="line"></span>
                     <span class="line"></span>
                 </div>
-                <ul class="nav-link-mobile">
-                    <li class="nav-items-mobile"><a href="beranda-page.html">Beranda</a></li>
-                    <li class="nav-items-mobile"><a href="toko-page.html">Toko</a></li>
-                    <li class="nav-items-mobile"><a href="about-us-page.html">Tentang Kami</a></li>
+                <ul class="nav-link-mobile" id="nav-mobile-non-active">
+                    <li class="nav-items-mobile"><a href="beranda-page.php">Beranda</a></li>
+                    <li class="nav-items-mobile"><a href="toko-page.php">Toko</a></li>
+                    <li class="nav-items-mobile"><a href="about-us-page.php">Tentang kami</a></li>
+                    <li class="nav-items-mobile"><a href="html/profile-page.html">Pengaturan Akun</a></li>
+                    <li class="nav-items-mobile"><a href="logout.php" class="logout-btn">Logout</a></li>
                 </ul>
             </div>
         </header>
