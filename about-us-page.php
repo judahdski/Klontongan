@@ -28,7 +28,13 @@
                 <a href="beranda-page.php" class="nav-items">Beranda</a>
                 <a href="toko-page.php" class="nav-items">Toko</a>
                 <a href="about-us-page.php" class="nav-items">Tentang kami</a>
-                <a href="#" class="profile-user"><img src=".." alt="" class="picture-user"></a>
+                <div class="profile">
+                    <a href="#" class="profile-user"><img src=".." alt="" class="picture-user"></a>
+                    <div class="profile-setting" id="profile-setting-non-active">
+                        <a href="../html/profile-page.html">Pengaturan Profile</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </div>
             </nav>
             <div class="nav-mobile">
                 <div class="hamburger">

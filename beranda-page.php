@@ -31,7 +31,7 @@
             <nav class="nav-link">
                 <a href="beranda-page.php" class="nav-items">Beranda</a>
                 <a href="toko-page.php" class="nav-items">Toko</a>
-                <a href="about-us-page.html" class="nav-items">Tentang kami</a>
+                <a href="about-us-page.php" class="nav-items">Tentang kami</a>
                 <a href="#" class="profile-user"><img src=".." alt="" class="picture-user"></a>
             </nav>
             <div class="nav-mobile">
