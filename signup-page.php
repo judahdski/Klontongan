@@ -34,8 +34,6 @@ if (isset($_POST["submit"])) {
 <div class="container">
         <nav>
             <img src="img/login-signup/logo-header.png" alt="K'lontongan" class="logo-picture">
-            <span class="close-btn"><a href="#"><img src="img/login-signup/close.svg" alt="Back to home-page"
-                        class="close"></a></span>
         </nav>
         <h3 class="title-page">Daftar</h3>
         <p class="to-login">Sudah punya akun? <a href="login-page.php" class="link-to-signup">Masuk di sini</a></p>
@@ -46,6 +44,7 @@ if (isset($_POST["submit"])) {
             </div>
             <input type="email" name="email" id="email" placeholder="E-mail">
             <input type="password" name="password" placeholder="Password">
+            <input type="password" name="password" placeholder="Ketik ulang password">
             <input type="text" name="noHp" placeholder="Nomor telepon">
             <textarea name="alamat" cols="30" rows="10" placeholder="Alamat"></textarea>
             <button type="submit" name="submit" value="Buat Akun" class="button-submit"><a>Daftar</a></button>

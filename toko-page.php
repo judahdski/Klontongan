@@ -6,9 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toko K'lontongan</title>
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <!-- Style -->
     <link rel="stylesheet" href="css/toko-page/header-tokopage.css">
     <link rel="stylesheet" href="css/toko-page/mainstyle-tokopage.css">
@@ -23,6 +20,7 @@ $sql=mysqli_query($conn, "SELECT * FROM barang");
 if (isset($_POST["submit"])) {
     $id_barang=$_POST['id_barang'];
     $banyak=$_POST['banyak'];
+    $biayaadmin=10000;
     $status = "Belum Terbayar";
     $sqljenis=mysqli_query($conn, "SELECT nama,harga,deskripsi FROM barang WHERE id_barang='$id_barang' LIMIT 1");
     $resultjenis=mysqli_fetch_array($sqljenis);
@@ -32,9 +30,9 @@ if (isset($_POST["submit"])) {
         alert('Pesan dengan minimal 1 item');
         document.location.href='toko-page.php';
         </script>";
-    } else {
-      $totalharga=($banyak * $resultjenis['harga']);
-        $sqlquery=mysqli_query($conn, "INSERT INTO pemesanan (totalharga, banyak, email, nama, status) VALUES ('$totalharga', '$banyak', '$email', '$nama', '$status') ");
+    }else{
+        $totalharga=($banyak * $resultjenis['harga']);
+        $sqlquery=mysqli_query($conn, "INSERT INTO pemesanan (totalharga, banyak, biayaadmin, email, nama, status) VALUES ('$totalharga', '$banyak', '$biayaadmin', '$email', '$nama', '$status') ");
     }
     if($sqlquery){
         echo "<script>
@@ -49,19 +47,14 @@ if (isset($_POST["submit"])) {
 
 <body>
     <div class="container">
-        <header>
-            <img src="img/header/logo-header.png" alt="K'lontongan" class="logo-header">
+        <header style="background-color: #fec429;">
+        <a href="#"><img src="img/login-signup/logo-header.png" alt="K'lontongan" class="logo-picture"></a>
             <nav class="nav-link">
                 <a href="beranda-page.php" class="nav-items">Beranda</a>
                 <a href="toko-page.php" class="nav-items">Toko</a>
-                <a href="about-us-page.php" class="nav-items">Tentang kami</a>
-                <div class="profile">
-                    <img src="img/header/account.png" alt="user" class="picture-user">
-                    <div class="profile-desktop" id="profile-dropdown">
-                        <a href="html/profile-page.html">Pengaturan Profile</a>
-                        <a href="#">Logout</a>
-                    </div>
-                </div>
+                <a href="tentangkami.php" class="nav-items">Tentang kami</a>
+                <a href="profile-page.php" class="profile-user"><img src="account.png" alt="" class="picture-user"></a>
+                <a href="logout.php">Logout</a>
             </nav>
             <div class="nav-mobile">
                 <div class="hamburger">
@@ -69,12 +62,10 @@ if (isset($_POST["submit"])) {
                     <span class="line"></span>
                     <span class="line"></span>
                 </div>
-                <ul class="nav-link-mobile" id="nav-mobile-non-active">
-                    <li class="nav-items-mobile"><a href="beranda-page.php">Beranda</a></li>
-                    <li class="nav-items-mobile"><a href="toko-page.php">Toko</a></li>
-                    <li class="nav-items-mobile"><a href="about-us-page.php">Tentang kami</a></li>
-                    <li class="nav-items-mobile"><a href="html/profile-page.html">Pengaturan Akun</a></li>
-                    <li class="nav-items-mobile"><a href="logout.php" class="logout-btn">Logout</a></li>
+                <ul class="nav-link-mobile">
+                    <li class="nav-items-mobile" href="#">Beranda</li>
+                    <li class="nav-items-mobile" href="#">Toko</li>
+                    <li class="nav-items-mobile" href="#">Tentang kami</li>
                 </ul>
             </div>
         </header>
@@ -83,14 +74,16 @@ if (isset($_POST["submit"])) {
             <?php foreach($sql as $row) : ?>
                 <div class="card">
                     <div class="image-products">
-                    <span class="qategory"><?= $row['deskripsi']; ?></span>
+                    <span class="category"> <p> <?= $row['deskripsi']; ?> </p> </span>
                     <img src="<?= $row['pict']; ?>" class="products-picture">
                     </div>
                     <div class="description-products">
                         <form action="" method="POST">
                         <h4 class="products-name"><?= $row['nama']; ?></h4>
-                        <p class="products-price">Rp<?= $row['harga']; ?></p>
-                        <input type="number" id="quantity" name="banyak" min="1" max="5" style="border-radius: 15px; background-color: white; padding: 5px; width: 100px; text-align: center;">
+                        <div class="hargadanjumlah">
+                            <p class="products-price">Rp<?= $row['harga']; ?></p>
+                            <input type="number" id="quantity" name="banyak" min="1" max="5"  value="1">
+                        </div>
                         <input type="hidden" value="<?= $row['id_barang'] ?>" name="id_barang">
                         <button type="submit" name="submit" class="btn-pesan">Pesan</button>
                         </form>
@@ -112,8 +105,6 @@ if (isset($_POST["submit"])) {
             </div>
         </footer>
     </div>
-
-    <script src="js/header.js"></script>
 </body>
 
 </html>

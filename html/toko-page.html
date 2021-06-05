@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toko K'lontongan</title>
     <!-- Style -->
-    <link rel="stylesheet" href="css/toko-page/header-tokopage.css">
-    <link rel="stylesheet" href="css/toko-page/mainstyle-tokopage.css">
-    <link rel="stylesheet" href="css/toko-page/footer-tokopage.css">
+    <link rel="stylesheet" href="../css/toko-page/header-tokopage.css">
+    <link rel="stylesheet" href="../css/toko-page/mainstyle-tokopage.css">
+    <link rel="stylesheet" href="../css/toko-page/footer-tokopage.css">
 </head>
 
 <body>
@@ -39,12 +39,17 @@
             <div class="template-of-card">
                 <div class="card">
                     <div class="image-products">
-                        <span class="category">sayuran</span>
+                        <span class="category">
+                            <p>judah dasuki</p>
+                        </span>
                         <img src="img/aboutUs-page/gambar-tentangKami-page.jpg" alt="gambar-sayuran">
                     </div>
                     <div class="description-products">
                         <h4 class="products-name">Wortel</h4>
-                        <p class="products-price">Rp10.000</p>
+                        <div class="hargadanjumlah">
+                            <p class="products-price">Rp10.000</p>
+                            <input type="number" id="quantity" name="banyak" min="1" max="5" value="1">
+                        </div>
                         <button class="btn-pesan"> Pesan</button>
                     </div>
                 </div>
@@ -63,7 +68,7 @@
         </footer>
     </div>
 
-    <script src="js/header.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

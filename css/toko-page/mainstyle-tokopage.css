@@ -47,18 +47,20 @@ main .template-of-card {
 .image-products span.category {
     display: block;
     position: absolute;
-    top: 15px;
+    top: 150px;
     left: 0;
-    width: 57px;
+    width: auto;
     height: 16px;
-    padding: 2px 8px;
+    padding: 2px 4px;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     background-color: #007580;
-    color: #fec429;
-    font-size: 0.65em;
-    text-align: center;
     z-index: 1;
+}
+
+span.category p {
+    color: #fec429;
+    font-size: 1em;
 }
 
 .image-products img {
@@ -81,6 +83,26 @@ main .template-of-card {
     font-size: 16px;
     color: #fec429;
     margin-bottom: 8px;
+}
+
+.hargadanjumlah {
+    margin: 0 0 12px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hargadanjumlah .products-price {
+    align-self: center;
+}
+
+.hargadanjumlah input {
+    border: 0.3px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 5px;
+    width: 70px;
+    text-align: center;
 }
 
 .description-products button.btn-pesan {
@@ -126,10 +148,6 @@ main .template-of-card {
 
     .description-products {
         padding: 15px 15px 10px;
-    }
-
-    .description-products p.products-price {
-        margin: 0 0 12px;
     }
 
     .description-products button.btn-pesan {
