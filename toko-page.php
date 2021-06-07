@@ -82,8 +82,10 @@ if (isset($_POST["submit"])) {
                     <div class="description-products">
                         <form action="" method="POST">
                         <h4 class="products-name"><?= $row['nama']; ?></h4>
-                        <p class="products-price">Rp<?= $row['harga']; ?></p>
-                        <input type="number" id="quantity" name="banyak" min="1" max="5" style="border-radius: 15px; background-color: white; padding: 5px; width: 100px; text-align: center;">
+                        <div class="hargadanjumlah">
+                            <p class="products-price">Rp<?= $row['harga']; ?></p>
+                            <input type="number" id="quantity" name="banyak" min="1" max="5"  value="1">
+                        </div>
                         <input type="hidden" value="<?= $row['id_barang'] ?>" name="id_barang">
                         <button type="submit" name="submit" class="btn-pesan">Pesan</button>
                         </form>
