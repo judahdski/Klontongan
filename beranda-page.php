@@ -32,7 +32,13 @@
                 <a href="beranda-page.php" class="nav-items">Beranda</a>
                 <a href="toko-page.php" class="nav-items">Toko</a>
                 <a href="about-us-page.php" class="nav-items">Tentang kami</a>
-                <a href="#" class="profile-user"><img src=".." alt="" class="picture-user"></a>
+                <div class="profile">
+                    <img src="img/header/account.png" alt="user" class="picture-user">
+                    <div class="profile-desktop" id="profile-dropdown">
+                        <a href="../html/profile-page.html">Pengaturan Profile</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </div>
             </nav>
             <div class="nav-mobile">
                 <div class="hamburger">
@@ -40,11 +46,12 @@
                     <span class="line"></span>
                     <span class="line"></span>
                 </div>
-                <ul class="nav-link-mobile">
-                    <li class="nav-items-mobile" href="beranda-page.html"><a href="beranda-page.html">Beranda</a></li>
-                    <li class="nav-items-mobile" href="toko-page.html"><a href="toko-page.html">Toko</a></li>
-                    <li class="nav-items-mobile" href="about-us-page.html"><a href="about-us-page.html">Tentang kami</a>
-                    </li>
+                <ul class="nav-link-mobile" id="nav-mobile-non-active">
+                    <li class="nav-items-mobile"><a href="beranda-page.php">Beranda</a></li>
+                    <li class="nav-items-mobile"><a href="toko-page.php">Toko</a></li>
+                    <li class="nav-items-mobile"><a href="about-us-page.php">Tentang kami</a></li>
+                    <li class="nav-items-mobile"><a href="html/profile-page.html">Pengaturan Akun</a></li>
+                    <li class="nav-items-mobile"><a href="logout.php" class="logout-btn">Logout</a></li>
                 </ul>
             </div>
         </header>
@@ -53,7 +60,7 @@
                 <h1 class="title-hero-content">ayo periksa kebutuhan panganmu sekarang</h1>
                 <p class="caption-hero-content">Kami menyediakan berbagai macam sayur, buah, dan bahan sembako. Coba
                     cek di sini!</p>
-                <a href="#" class="hero-content-btn">Kunjungi Toko</a>
+                <a href="toko-page.php" class="hero-content-btn">Kunjungi Toko</a>
             </section>
             <section class="aboutus">
                 <h2 class="title-aboutus">Tentang Kami</h2>
@@ -92,7 +99,7 @@
                     <img src="img/beranda-page/jeruk.jpg" alt="gambar-dua" class="image-toko-tablet">
                     <img src="img/beranda-page/ayam.jpg" alt="gambar-tiga" class="image-toko-mobile">
                 </div>
-                <a href="#" class="toko-btn">Belanja di Sini</a>
+                <a href="toko-page.php" class="toko-btn">Belanja di Sini</a>
             </section>
             <section class="comments">
                 <h2 class="title-comments">apa yang mereka katakan</h2>
@@ -112,12 +119,12 @@
                 <h3 class="title-to-login">selamat datang</h3>
                 <p class="caption-to-login">klik dan masuk dengan alamat emailmu untuk mendapatkan penawaran yang
                     terbaik</p>
-                <a href="#" class="btn-to-login">Masuk</a>
+                <a href="login-page.php" class="btn-to-login">Masuk</a>
             </section>
         </main>
         <footer>
             <div class="social-media">
-                <a href="https://www.instagram.com/klontongan.id/"><img src="img/footer/instagram-warna.svg"
+                <a href="https://www.instagram.com/klontongan.id/" target="_blank"><img src="img/footer/instagram-warna.svg"
                         alt="Instagram"></a>
                 <a href="#"><img src="img/footer/line-warna.svg" alt="Line"></a>
                 <a href="#"><img src="img/footer/facebook-warna.svg" alt="Facebook"></a>
@@ -129,7 +136,7 @@
         </footer>
     </div>
 
-    <script src="js/header.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

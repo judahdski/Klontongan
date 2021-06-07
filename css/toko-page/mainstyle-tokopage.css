@@ -49,13 +49,18 @@ main .template-of-card {
     position: absolute;
     top: 15px;
     left: 0;
-    padding: 0 5px;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
+
     background-color: #007580;
     z-index: 1;
     color: #fec429;
     font-size: 0.875em;
+}
+
+span.category p {
+    color: #fec429;
+    font-size: 1em;
 }
 
 .image-products img {

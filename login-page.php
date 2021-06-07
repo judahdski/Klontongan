@@ -27,7 +27,6 @@
 <div class="container">
         <nav>
             <img src="img/login-signup/logo-header.png" alt="Logo Klontongan" class="logo-picture">
-            <a href="#"><img src="img/login-signup/close.svg" alt="back to home" class="btn-exit"></a>
         </nav>
         <h3 class="title-page">Masuk</h3>
         <p class="to-signup">Belum punya akun? <a href="signup-page.php" class="link-to-signup">Daftar di sini</a></p>
